@@ -1,0 +1,10 @@
+@import "compass/reset";
+@import "compass/utilities";
+@import "compass/css3";
+
+@mixin helvetica {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+$green: #9AC65C;
+$blue: #3597f3;

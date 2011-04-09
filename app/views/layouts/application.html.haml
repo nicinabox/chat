@@ -1,7 +1,10 @@
 !!! 5
 %head
-  = stylesheet_link_tag 'boilerplate5mobile.css'
-  = stylesheet_link_tag 'screen.css', :media => 'screen, projection', 'min-width' => 400
+  %title 
+    Groupon Go Chat
+  %meta{ :name => "viewport", :content => "width=device-width" }
+  = stylesheet_link_tag 'mobile', :media => 'all and (max-width: 480px)'
+  = stylesheet_link_tag 'screen.css', :media => 'all and (min-width: 481px)'
   = javascript_include_tag 'jquery', 'pusher', 'mustache', '/mustache_templates.js', 'application'
 %body
   = yield

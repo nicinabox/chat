@@ -1,3 +1,7 @@
+if (navigator.userAgent.match(/Mobile/i)) {
+  var mobile = true;
+}
+
 $(function() {
   $('#chat_input').keypress(function(){
     $(this).removeAttr('style');
@@ -48,9 +52,12 @@ pusher.bind('new_post',
       chat_input: data.body,
       time_ago: 'less than a minute'
     };
-    $('#chat_data').prepend(Mustache.to_html(tmpl, post));
+    if (mobile) {
+      $('#chat_data').append(Mustache.to_html(tmpl, post));
+    } else {
+      $('#chat_data').prepend(Mustache.to_html(tmpl, post));
+    }
+    
   }
 );
-
-
 
