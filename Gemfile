@@ -14,6 +14,12 @@ gem 'juggernaut'
 gem 'pusher'
 
 gem 'haml'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl'
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
