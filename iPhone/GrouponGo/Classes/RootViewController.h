@@ -26,6 +26,8 @@
 	BOOL text;
 	NSTimer *timer;
 
+	NSMutableArray *messages;
+	
 	SSLineView *lineView;
 	SA_OAuthTwitterEngine *_engine;  
 }
@@ -37,6 +39,8 @@
 @property (nonatomic, retain) IBOutlet AsyncImageView *avatar;
 @property (nonatomic, retain) UIButton *send;
 @property (nonatomic, retain) IBOutlet UITableViewCell *tableCell;
+
+@property (nonatomic, retain) NSMutableArray *messages;
 
 - (void)sendMessage;
 - (void)refresh;

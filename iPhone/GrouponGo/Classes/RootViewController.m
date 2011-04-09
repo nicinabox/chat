@@ -21,6 +21,7 @@
 @synthesize send;
 @synthesize table;
 @synthesize tableCell;
+@synthesize messages;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -30,6 +31,7 @@
 	
 	self.title = @"Groupon Go";
 	
+	messages = [[NSMutableArray alloc] initWithObjects:@"jonahgrant", @"to_morrow", @"joshpuckett", @"marekdzik", nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -79,7 +81,8 @@
 	[send setTitleShadowColor:[UIColor colorWithRed:0.325 green:0.463 blue:0.675 alpha:1.0] forState:UIControlStateNormal];
 	[self.view addSubview:send];
 	
-	[table scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:29 inSection:0] 
+	NSIndexPath *scrollIndexPath = [NSIndexPath indexPathForRow:([messages count] - 1) inSection:0];
+	[table scrollToRowAtIndexPath:scrollIndexPath
 				 atScrollPosition:UITableViewScrollPositionTop 
 						 animated:YES];
 	
@@ -154,8 +157,8 @@
 	send.frame = CGRectMake(256.0, 168.0, 59.0, 27.0);
 	[UIView commitAnimations];
 	//if ([messages count] > 0) {
-		//NSIndexPath *scrollIndexPath = [NSIndexPath indexPathForRow:([messages count] - 1) inSection:0];
-		[table scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:29 inSection:0] 
+		NSIndexPath *scrollIndexPath = [NSIndexPath indexPathForRow:([messages count] - 1) inSection:0];
+		[table scrollToRowAtIndexPath:scrollIndexPath 
 						   atScrollPosition:UITableViewScrollPositionTop 
 								   animated:YES];
 	//}
@@ -221,7 +224,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 30;
+    return [messages count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -249,12 +252,12 @@
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-	name.text = [prefs stringForKey:@"username"];
+	//name.text = [prefs stringForKey:@"username"];
+	name.text = [messages objectAtIndex:indexPath.row];
 	message.text = [NSString stringWithFormat:@"Cell number %i", indexPath.row];
 		
-	if ([prefs stringForKey:@"username"] == name.text) {
-		// set text and image to right
-		//name.textAlignment = UITextAlignmentRight;
+	if ([messages objectAtIndex:indexPath.row] == [prefs stringForKey:@"username"]) {
+		name.textAlignment = UITextAlignmentRight;
 	}
 	
 	[(AsyncImageView *)[cell.contentView viewWithTag:104] setBackgroundColor:[UIColor clearColor]];
@@ -262,8 +265,11 @@
 	[[(AsyncImageView *)[cell.contentView viewWithTag:104] layer] setMasksToBounds:YES];
 	//[[(AsyncImageView *)[cell.contentView viewWithTag:104] layer] setBorderColor:[UIColor whiteColor].CGColor];
 	//[[(AsyncImageView *)[cell.contentView viewWithTag:104] layer] setBorderWidth:2.0f];
+	//[(AsyncImageView *)[cell.contentView viewWithTag:104] loadImageFromURL:
+	// [NSURL URLWithString:[NSString stringWithFormat:@"http://api.twitter.com/1/users/profile_image/%@.json?size=bigger", [prefs stringForKey:@"username"]]]];
+
 	[(AsyncImageView *)[cell.contentView viewWithTag:104] loadImageFromURL:
-	 [NSURL URLWithString:[NSString stringWithFormat:@"http://api.twitter.com/1/users/profile_image/%@.json?size=bigger", [prefs stringForKey:@"username"]]]];
+	 [NSURL URLWithString:[NSString stringWithFormat:@"http://api.twitter.com/1/users/profile_image/%@.json?size=bigger", [messages objectAtIndex:indexPath.row]]]];
 
     return cell;
 }
