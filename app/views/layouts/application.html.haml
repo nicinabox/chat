@@ -1,7 +1,7 @@
 !!! 5
 %head
   = stylesheet_link_tag 'mobile', :media => 'all and (max-device-width: 480px)'
-  = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
-  = javascript_include_tag 'jquery', 'pusher', 'application'
+  = stylesheet_link_tag 'screen.css', :media => 'all and (min-device-width: 481px)'
+  = javascript_include_tag 'jquery', 'pusher', 'mustache', '/mustache_templates.js', 'application'
 %body
   = yield
