@@ -19,7 +19,10 @@
   %ul#chat_data
     - @posts.each do |post|
       %li
-        %span.byline
+        .byline
           =raw "#{image_tag post.user.profile_image_url, :size => "30x30"} #{post.user.name}"
-        = auto_link(post.chat_input)
+        .message
+          = auto_link(post.chat_input)
+        .timestamp
+          = "#{time_ago_in_words(post.created_at)} ago"
 
