@@ -1,5 +1,5 @@
 require 'factory_girl'
 
 Factory.define :post do |p|
-  p.message "hello, world!"
+  p.chat_input "hello, world!"
 end
