@@ -14,6 +14,7 @@ class ChatsController < ApplicationController
       :body              => params[:chat_input],
       :name              => current_user.name,
       :profile_image_url => current_user.profile_image_url,
+      :twitter_login     => current_user.twitter_login,
       :type              => :to_channels_without_signature, 
       :channels          => 'groupon_go'
     }
