@@ -8,6 +8,9 @@
 
 #import "RootViewController.h"
 #import "SA_OAuthTwitterEngine.h"  
+#import "PTPusher.h"
+#import "PTPusherEvent.h"
+#import "PTPusherChannel.h"
 
 #define kOAuthConsumerKey        @"StQR6yZ9xgRkqFHI8TO1w"
 #define kOAuthConsumerSecret    @"byWDt5n6Z3RqHn9IcwPSGiABX0fiHdfqFmflwfLA"
@@ -30,6 +33,8 @@
 @synthesize table;
 @synthesize tableCell;
 @synthesize messages;
+@synthesize pusher;
+@synthesize eventsChannel;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -37,9 +42,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	messages = [[NSMutableArray alloc] initWithObjects:@"jonahgrant", @"groupon", @"to_morrow", @"joshpuckett", @"marekdzik", nil];
+	if (messages == nil) {
+		messages = [[NSMutableArray alloc] init];
+	}
+	if (eventsChannel == nil) {
+		eventsChannel = [PTPusher newChannel:@"groupon_go"];
+		eventsChannel.delegate = self;
+	}
+	[eventsChannel startListeningForEvents];
+	
+	//messages = [[NSMutableArray alloc] initWithObjects:@"jonahgrant", @"groupon", @"to_morrow", @"joshpuckett", @"marekdzik", nil];
+	
+	pusher = [[PTPusher alloc] initWithKey:@"534d197146cf867179ee" 
+								   channel:@"groupon_go"];
+	pusher.delegate = self;
+	
+	[PTPusher setKey:@"534d197146cf867179ee"];
+	[PTPusher setSecret:@"4a0cf79a75eaff29cfc7"];
+	[PTPusher setAppID:@"3638"];
+	
+	// pusher.reconnect = YES;
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handlePusherEvent:) name:PTPusherEventReceivedNotification object:nil];
+	
+	[pusher addEventListener:@"alert" target:self selector:@selector(handleAlertEvent:)];
+	
 }
 
+// generic alert handler, handle all events using NSNotifications
+- (void)handlePusherEvent:(NSNotification *)note;
+{
+	NSLog(@"Received event: %@", note.object);
+}
+
+- (void)handleEvent:(PTPusherEvent *)event;
+{
+	//PTPusherEvent *event = note.object;
+	NSLog(@"Received event %@ with data %@", event.name, event.data);
+}
+
+- (void)handleAlertEvent:(PTPusherEvent *)event;
+{
+	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[event.data valueForKey:@"title"] message:[event.data valueForKey:@"message"] delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
+	[alertView show];
+	[alertView release];
+}
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 	
@@ -76,27 +123,28 @@
 	[textField release];
 	
 	send = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
-	send.frame = CGRectMake(self.view.frame.size.width - 65.0, 382, 59.0, 27.0);
+	send.frame = CGRectMake(self.view.frame.size.width - 65.0, 382, 59.0, 29.0);
 	send.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
 	send.titleLabel.font = [UIFont boldSystemFontOfSize:16.0];
 	send.titleLabel.shadowOffset = CGSizeMake(0.0, -1.0);
-	[send setBackgroundImage:[[UIImage imageNamed:@"SSMessagesViewControllerSendButtonBackground.png"] stretchableImageWithLeftCapWidth:12 topCapHeight:0] forState:UIControlStateNormal];
+	[send setBackgroundImage:[[UIImage imageNamed:@"btn_send.png"] stretchableImageWithLeftCapWidth:12 topCapHeight:0] forState:UIControlStateNormal];
 	[send setTitle:@"Send" forState:UIControlStateNormal];
 	[send addTarget:nil action:@selector(sendMessage) forControlEvents:UIControlEventTouchUpInside];
 	[send setTitleColor:[UIColor colorWithWhite:1.0 alpha:0.4] forState:UIControlStateNormal];
-	[send setTitleShadowColor:[UIColor colorWithRed:0.325 green:0.463 blue:0.675 alpha:1.0] forState:UIControlStateNormal];
+	[send setTitleShadowColor:[UIColor colorWithWhite:0.5 alpha:1] forState:UIControlStateNormal];
 	[self.view addSubview:send];
 	
-	NSIndexPath *scrollIndexPath = [NSIndexPath indexPathForRow:([messages count] - 1) inSection:0];
-	[table scrollToRowAtIndexPath:scrollIndexPath
-				 atScrollPosition:UITableViewScrollPositionTop 
-						 animated:YES];
+	//NSIndexPath *scrollIndexPath = [NSIndexPath indexPathForRow:([messages count] - 1) inSection:0];
+	//[table scrollToRowAtIndexPath:scrollIndexPath
+	//			 atScrollPosition:UITableViewScrollPositionTop 
+	//					 animated:YES];
 	
-	NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:
+	/*NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:
 								[self methodSignatureForSelector: @selector(refresh)]];
 	[invocation setTarget:self];
 	[invocation setSelector:@selector(refresh)];
-	timer = [NSTimer scheduledTimerWithTimeInterval:5.0 invocation:invocation repeats:YES];
+	timer = [NSTimer scheduledTimerWithTimeInterval:5.0 invocation:invocation repeats:YES];*/
+	
 }
 
 - (void)viewDidAppear: (BOOL)animated {
@@ -126,6 +174,65 @@
 {
 	NSLog(@"refreshing");	
 }
+
+#pragma mark -
+#pragma mark PTPusherDelegate methods
+
+- (void)pusherWillConnect:(PTPusher *)_pusher;
+{
+	NSLog(@"Pusher %@ connecting...", _pusher);
+}
+
+- (void)pusherDidConnect:(PTPusher *)_pusher;
+{
+	NSLog(@"Pusher %@ connected", _pusher);
+}
+
+- (void)pusherDidDisconnect:(PTPusher *)_pusher;
+{
+	NSLog(@"Pusher %@ disconnected", _pusher);
+}
+
+- (void)pusherDidFailToConnect:(PTPusher *)_pusher withError:(NSError *)error;
+{
+	NSLog(@"Pusher %@ failed with error %@", _pusher, error);
+}
+
+- (void)pusherWillReconnect:(PTPusher *)_pusher afterDelay:(NSUInteger)delay;
+{
+	NSLog(@"Pusher %@ will reconnect after %d seconds", _pusher, delay);
+}
+
+#pragma mark -
+#pragma mark PTPusherChannel delegate
+
+- (void)channel:(PTPusherChannel *)channel didReceiveEvent:(PTPusherEvent *)event;
+{
+	if ([event.name isEqualToString:@"new_post"]) {
+		[table beginUpdates];
+		[messages insertObject:event atIndex:0];
+		NSLog(@"added the cell %@", event.name);
+		[table insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationTop];
+		[table endUpdates];
+	}
+	
+}
+
+- (void)channelDidConnect:(PTPusherChannel *)channel
+{
+	NSLog(@"Listening on channel %@", channel.name);
+}
+
+- (void)channelDidDisconnect:(PTPusherChannel *)channel
+{
+	NSLog(@"Stopped listening on channel %@", channel.name);
+}
+
+- (void)channelFailedToTriggerEvent:(PTPusherChannel *)channel error:(NSError *)error
+{
+	NSLog(@"Error triggering event on channel %@, error: %@", channel.name, error);
+}
+
 
  - (void)sendMessage
 {
@@ -259,12 +366,17 @@
 	
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	//name.text = [prefs stringForKey:@"username"];
-	name.text = [messages objectAtIndex:indexPath.row];
-	message.text = [NSString stringWithFormat:@"Cell number %i", indexPath.row];
+	//name.text = [messages objectAtIndex:indexPath.row];
+	//message.text = [NSString stringWithFormat:@"Cell number %i", indexPath.row];
 		
-	if ([messages objectAtIndex:indexPath.row] == [prefs stringForKey:@"username"]) {
-		name.textAlignment = UITextAlignmentRight;
-	}
+	//if ([messages objectAtIndex:indexPath.row] == [prefs stringForKey:@"username"]) {
+	//	name.textAlignment = UITextAlignmentRight;
+	//}
+	
+	PTPusherEvent *event = [messages objectAtIndex:indexPath.row];
+	message.text = [event.data valueForKey:@"body"];
+	name.text = [event.data valueForKey:@"name"];
+
 	
 	[(AsyncImageView *)[cell.contentView viewWithTag:104] setBackgroundColor:[UIColor clearColor]];
 	//[[(AsyncImageView *)[cell.contentView viewWithTag:104] layer] setBorderColor:[UIColor whiteColor].CGColor];
@@ -282,7 +394,7 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [textField resignFirstResponder];
 	/*
 	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
      // ...
@@ -311,6 +423,7 @@
 
 - (void)dealloc {
 	[_engine release];
+	[eventsChannel release];
     [super dealloc];
 }
 
