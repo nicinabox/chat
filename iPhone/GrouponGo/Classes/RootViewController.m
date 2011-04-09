@@ -15,7 +15,7 @@
 
 @implementation UINavigationBar (CustomImage)
 - (void)drawRect:(CGRect)rect {
-    UIImage *image = [UIImage imageNamed: @"bg_navbar_logo.png"];
+    UIImage *image = [UIImage imageNamed:@"navbar.png"];
     [image drawInRect:rect];
 }
 @end
@@ -36,8 +36,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-	self.title = @"Groupon Go";
 	
 	messages = [[NSMutableArray alloc] initWithObjects:@"jonahgrant", @"groupon", @"to_morrow", @"joshpuckett", @"marekdzik", nil];
 }
@@ -269,8 +267,6 @@
 	}
 	
 	[(AsyncImageView *)[cell.contentView viewWithTag:104] setBackgroundColor:[UIColor clearColor]];
-	[[(AsyncImageView *)[cell.contentView viewWithTag:104] layer] setCornerRadius:10.0];
-	[[(AsyncImageView *)[cell.contentView viewWithTag:104] layer] setMasksToBounds:YES];
 	//[[(AsyncImageView *)[cell.contentView viewWithTag:104] layer] setBorderColor:[UIColor whiteColor].CGColor];
 	//[[(AsyncImageView *)[cell.contentView viewWithTag:104] layer] setBorderWidth:2.0f];
 	//[(AsyncImageView *)[cell.contentView viewWithTag:104] loadImageFromURL:
