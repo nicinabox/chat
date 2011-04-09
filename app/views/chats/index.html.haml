@@ -15,6 +15,8 @@
       = text_field_tag :chat_input, '', :placeholder => "#{current_user.name}: "
       = hidden_field_tag :user_id, current_user.id
       = submit_tag 'Post'
+      %span.error
+        You can't submit an empty message!
 
   %ul#chat_data
     - @posts.each do |post|
