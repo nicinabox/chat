@@ -10,10 +10,11 @@ class ChatsController < ApplicationController
   end
   
   def send_data
-    @post = Post.create(params.slice(:user_id, :chat_input))
+    msg = sanitize(auto_link(auto_image(params[:chat_input])), :tags => %w(a img), :attributes => %w(href src alt))
+    @post = current_user.posts.create!(:chat_input => msg)
     post_data = {
       :command           => :broadcast,
-      :body              => sanitize(auto_link(auto_image(params[:chat_input])), :tags => %w(a img), :attributes => %w(href src alt)),
+      :body              => msg,
       :name              => current_user.name,
       :profile_image_url => current_user.profile_image_url,
       :type              => :to_channels_without_signature, 
