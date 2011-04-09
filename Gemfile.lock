@@ -37,6 +37,8 @@ GEM
     activesupport (3.0.3)
     arel (2.0.9)
     builder (2.1.2)
+    compass (0.10.6)
+      haml (>= 3.0.4)
     crack (0.1.8)
     diff-lcs (1.1.2)
     erubis (2.6.6)
@@ -109,6 +111,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  compass
   factory_girl
   haml
   juggernaut
