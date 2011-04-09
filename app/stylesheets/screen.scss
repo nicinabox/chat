@@ -20,6 +20,7 @@ h1 {
   outline: none;
   position: relative;
   input {
+    font-size: 14px;
     outline: none;
     padding: 10px;
     @include border-radius(3px);
