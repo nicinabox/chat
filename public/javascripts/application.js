@@ -1,19 +1,21 @@
-if (navigator.userAgent.match(/Mobile/i)) {
-  var mobile = true;
-}
+if (navigator.userAgent.match(/Mobile|WebOS/i)) var mobile = true;
 
 $(function() {
   $('#chat_input').keypress(function(){
     $(this).removeAttr('style');
     $('.error').hide();
+    $('.loading').hide();
   });
   
   $('#message_post_form').submit(function(e) {
     e.preventDefault();
+    
     var msg = $('#chat_input').val();
     if (msg !== "") {
+      $('.loading').show();
       $(this).request(function(response) {
         $('#chat_input').val('');
+        $('.loading').fadeOut('fast');
       }); 
     } else {
       $('#chat_input').css({
@@ -22,6 +24,7 @@ $(function() {
       $('.error').show();
     }
   });
+  
   $('#chat_input').focus();
 });
 

@@ -56,6 +56,15 @@ h1 {
     color: #f66;
     font-size: 12px;
   }
+  .loading {
+    display: none;
+    top: 11px;
+    right: 180px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: image-url('indicator.gif') no-repeat;
+  }
 }
 #chat_data {
   li {
