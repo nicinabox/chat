@@ -1,9 +1,22 @@
 $(function() {
+  $('#chat_input').keypress(function(){
+    $(this).removeAttr('style');
+    $('.error').hide();
+  });
+  
   $('#message_post_form').submit(function(e) {
     e.preventDefault();
-    $(this).request(function(response) {
-      $('#chat_input').val('');
-    });
+    var msg = $('#chat_input').val();
+    if (msg !== "") {
+      $(this).request(function(response) {
+        $('#chat_input').val('');
+      }); 
+    } else {
+      $('#chat_input').css({
+        'border-color': 'red'
+      }).focus();
+      $('.error').show();
+    }
   });
   $('#chat_input').focus();
 });
