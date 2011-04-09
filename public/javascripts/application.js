@@ -50,6 +50,7 @@ pusher.bind('new_post',
     var tmpl = MustacheTemplates['chats/_post'];
     var post = {
       profile_image_url: data.profile_image_url,
+			twitter_login: data.twitter_login,
       name: data.name,
       chat_input: data.body,
       time_ago: 'less than a minute'
