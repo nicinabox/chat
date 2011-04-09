@@ -8,6 +8,9 @@
 
 #import "RootViewController.h"
 #import "SA_OAuthTwitterEngine.h"  
+#import "PTPusher.h"
+#import "PTPusherEvent.h"
+#import "PTPusherChannel.h"
 
 #define kOAuthConsumerKey        @"StQR6yZ9xgRkqFHI8TO1w"
 #define kOAuthConsumerSecret    @"byWDt5n6Z3RqHn9IcwPSGiABX0fiHdfqFmflwfLA"
@@ -30,6 +33,8 @@
 @synthesize table;
 @synthesize tableCell;
 @synthesize messages;
+@synthesize pusher;
+@synthesize eventsChannel;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -37,9 +42,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	//if (eventsReceived == nil) {
+	//	eventsReceived = [[NSMutableArray alloc] init];
+	//}
+	//if (eventsChannel == nil) {
+		eventsChannel = [PTPusher newChannel:@"groupon_go"];
+		eventsChannel.delegate = self;
+	[eventsChannel startListeningForEvents];
+	//}
+	
 	messages = [[NSMutableArray alloc] initWithObjects:@"jonahgrant", @"groupon", @"to_morrow", @"joshpuckett", @"marekdzik", nil];
+	
+	pusher = [[PTPusher alloc] initWithKey:@"534d197146cf867179ee" 
+								   channel:@"groupon_go"];
+	pusher.delegate = self;
+	
+	[PTPusher setKey:@"534d197146cf867179ee"];
+	[PTPusher setSecret:@"4a0cf79a75eaff29cfc7"];
+	[PTPusher setAppID:@"3638"];
+	
+	// pusher.reconnect = YES;
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handlePusherEvent:) name:PTPusherEventReceivedNotification object:nil];
+	
+	[pusher addEventListener:@"alert" target:self selector:@selector(handleAlertEvent:)];
+	
 }
 
+// generic alert handler, handle all events using NSNotifications
+- (void)handlePusherEvent:(NSNotification *)note;
+{
+	NSLog(@"Received event: %@", note.object);
+}
+
+- (void)handleEvent:(PTPusherEvent *)event;
+{
+	//PTPusherEvent *event = note.object;
+	NSLog(@"Received event %@ with data %@", event.name, event.data);
+}
+
+- (void)handleAlertEvent:(PTPusherEvent *)event;
+{
+	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[event.data valueForKey:@"title"] message:[event.data valueForKey:@"message"] delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
+	[alertView show];
+	[alertView release];
+}
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 	
@@ -92,11 +139,12 @@
 				 atScrollPosition:UITableViewScrollPositionTop 
 						 animated:YES];
 	
-	NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:
+	/*NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:
 								[self methodSignatureForSelector: @selector(refresh)]];
 	[invocation setTarget:self];
 	[invocation setSelector:@selector(refresh)];
-	timer = [NSTimer scheduledTimerWithTimeInterval:5.0 invocation:invocation repeats:YES];
+	timer = [NSTimer scheduledTimerWithTimeInterval:5.0 invocation:invocation repeats:YES];*/
+	
 }
 
 - (void)viewDidAppear: (BOOL)animated {
@@ -126,6 +174,63 @@
 {
 	NSLog(@"refreshing");	
 }
+
+#pragma mark -
+#pragma mark PTPusherDelegate methods
+
+- (void)pusherWillConnect:(PTPusher *)_pusher;
+{
+	NSLog(@"Pusher %@ connecting...", _pusher);
+}
+
+- (void)pusherDidConnect:(PTPusher *)_pusher;
+{
+	NSLog(@"Pusher %@ connected", _pusher);
+}
+
+- (void)pusherDidDisconnect:(PTPusher *)_pusher;
+{
+	NSLog(@"Pusher %@ disconnected", _pusher);
+}
+
+- (void)pusherDidFailToConnect:(PTPusher *)_pusher withError:(NSError *)error;
+{
+	NSLog(@"Pusher %@ failed with error %@", _pusher, error);
+}
+
+- (void)pusherWillReconnect:(PTPusher *)_pusher afterDelay:(NSUInteger)delay;
+{
+	NSLog(@"Pusher %@ will reconnect after %d seconds", _pusher, delay);
+}
+
+#pragma mark -
+#pragma mark PTPusherChannel delegate
+
+- (void)channel:(PTPusherChannel *)channel didReceiveEvent:(PTPusherEvent *)event;
+{
+	if ([event.name isEqualToString:@"new-event"]) {
+		[table beginUpdates];
+		[messages insertObject:event atIndex:0];
+		[table insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationTop];
+		[table endUpdates];
+	}
+}
+
+- (void)channelDidConnect:(PTPusherChannel *)channel
+{
+	NSLog(@"Listening on channel %@", channel.name);
+}
+
+- (void)channelDidDisconnect:(PTPusherChannel *)channel
+{
+	NSLog(@"Stopped listening on channel %@", channel.name);
+}
+
+- (void)channelFailedToTriggerEvent:(PTPusherChannel *)channel error:(NSError *)error
+{
+	NSLog(@"Error triggering event on channel %@, error: %@", channel.name, error);
+}
+
 
  - (void)sendMessage
 {
@@ -311,6 +416,7 @@
 
 - (void)dealloc {
 	[_engine release];
+	[eventsChannel release];
     [super dealloc];
 }
 
