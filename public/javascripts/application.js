@@ -36,7 +36,7 @@ $(function() {
 
 var pusher = new Pusher('534d197146cf867179ee');
 
-var channel = pusher.subscribe('groupon_gov');
+var channel = pusher.subscribe('groupon_go');
 
 pusher.bind('new_post',
   function(data) {
