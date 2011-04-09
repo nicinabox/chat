@@ -10,11 +10,19 @@
 #import "SSLineView.h"
 #import "SSTextField.h"
 #import "SA_OAuthTwitterController.h"  
+#import "PTPusher.h"
+#import "PTPusherDelegate.h"
+#import "PTPusherChannelDelegate.h"
 
 @class SA_OAuthTwitterEngine;  
 @class AsyncImageView;
+@class PTPusherChannel;
 
-@interface RootViewController : UIViewController <NSXMLParserDelegate, UITextFieldDelegate, SA_OAuthTwitterControllerDelegate, UITableViewDelegate, UITableViewDataSource> {
+@protocol GrouponGoDelegate
+- (void)sendEventWithMessage:(NSString *)message;
+@end
+
+@interface RootViewController : UIViewController <PTPusherChannelDelegate, PTPusherDelegate, NSXMLParserDelegate, UITextFieldDelegate, SA_OAuthTwitterControllerDelegate, UITableViewDelegate, UITableViewDataSource> {
 	UITableView *table;
 	UITableViewCell *tableCell;
 	UILabel *name;
@@ -29,7 +37,9 @@
 	NSMutableArray *messages;
 	
 	SSLineView *lineView;
-	SA_OAuthTwitterEngine *_engine;  
+	SA_OAuthTwitterEngine *_engine;
+	PTPusher *pusher;
+	PTPusherChannel *eventsChannel;
 }
 @property (nonatomic, retain) UITableView *table;
 @property (nonatomic, retain) IBOutlet UILabel *name;
@@ -39,8 +49,9 @@
 @property (nonatomic, retain) IBOutlet AsyncImageView *avatar;
 @property (nonatomic, retain) UIButton *send;
 @property (nonatomic, retain) IBOutlet UITableViewCell *tableCell;
-
 @property (nonatomic, retain) NSMutableArray *messages;
+@property (nonatomic, retain) PTPusher *pusher;
+@property (nonatomic, readonly) PTPusherChannel *eventsChannel;
 
 - (void)sendMessage;
 - (void)refresh;

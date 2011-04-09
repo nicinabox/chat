@@ -12,6 +12,10 @@
 		<data>
 		pYkYjnB/DKRshg1tN7huX3mT/jc=
 		</data>
+		<key>CREDITS</key>
+		<data>
+		cOhOjUrOvLstvXND27VlyP92TQI=
+		</data>
 		<key>EntryBackground@2x.png</key>
 		<data>
 		HjZHwUnqyFRDlYzk+0+QcxWF9t4=
@@ -22,7 +26,7 @@
 		</data>
 		<key>MainWindow.nib</key>
 		<data>
-		slTS8af0BbkthWQ1pnkSSSiS4tw=
+		NqF2cXMNmSp3Th7t17DGXJsDGi0=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -34,7 +38,7 @@
 		</data>
 		<key>RootViewController.nib</key>
 		<data>
-		Ivm6JP4zepfTk89FS6/uRgf/NgQ=
+		DD7a4rL+yGoJJj+LaQ8Pe9UUA8Y=
 		</data>
 		<key>SSMessageTableViewCellBackgroundGray.png</key>
 		<data>
@@ -62,7 +66,7 @@
 		</data>
 		<key>TableCell.nib</key>
 		<data>
-		YBi/9YVxFozDwcoLlhfdvlllFwI=
+		PhdEknmOD/xGXqrW66U1HVUVvLA=
 		</data>
 		<key>YAJL.dxy</key>
 		<data>
@@ -75,6 +79,14 @@
 		<key>bg_avatar@2x.png</key>
 		<data>
 		pXmvZbSjPK6cVTq6lsd9++b92uo=
+		</data>
+		<key>btn_send.png</key>
+		<data>
+		71Qkg306qzWLUg7Qy0+svS9QaM0=
+		</data>
+		<key>btn_send@2x.png</key>
+		<data>
+		9Q1zzBR/XBTYe4cMn6F8JxGHU/M=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -95,10 +107,6 @@
 		<key>navbar@2x.png</key>
 		<data>
 		+803AOPYKbT+bqh0P7nnG2DkQEk=
-		</data>
-		<key>twitter_load.png</key>
-		<data>
-		AKiI05ikI41r8idbjryeJgpUExA=
 		</data>
 		<key>white.png</key>
 		<data>
