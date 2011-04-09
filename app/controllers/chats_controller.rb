@@ -10,11 +10,12 @@ class ChatsController < ApplicationController
   def send_data
     @post = Post.create(params.slice(:user_id, :chat_input))
     post_data = {
-      :command   => :broadcast,
-      :body      => params[:chat_input],
-      :name      => current_user.name,
-      :type      => :to_channels_without_signature, 
-      :channels  => 'groupon_go'
+      :command           => :broadcast,
+      :body              => params[:chat_input],
+      :name              => current_user.name,
+      :profile_image_url => current_user.profile_image_url,
+      :type              => :to_channels_without_signature, 
+      :channels          => 'groupon_go'
     }
     Pusher['groupon_go'].trigger!('new_post', post_data)
     #render :juggernaut => {:type => :send_to_channels, :channels => ['web']} do |page|
@@ -24,5 +25,4 @@ class ChatsController < ApplicationController
   end
   
 end
-
 
