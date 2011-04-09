@@ -1,6 +1,13 @@
 @import "partials/mobile_base";
 
-
+#type_wrapper {
+  width: 320px;
+  float: right;
+}
+#chat_data {
+  width: 320px;
+  float: right;
+}
 
 /* iPhone 4, Opera Mobile 11 and other high pixel ratio devices ----------- */
 @media
