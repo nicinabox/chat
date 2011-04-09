@@ -60,5 +60,3 @@ pusher.bind('new_post',
   }
 );
 
-
-

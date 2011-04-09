@@ -2,6 +2,8 @@ class ChatsController < ApplicationController
   before_filter :login_required
   protect_from_forgery :except => :post
   respond_to :json
+  include ApplicationHelper
+  delegate :link_to, :auto_link, :sanitize, :to => 'ActionController::Base.helpers'
 
   def index
    @posts = Post.order('created_at DESC')
@@ -11,7 +13,7 @@ class ChatsController < ApplicationController
     @post = Post.create(params.slice(:user_id, :chat_input))
     post_data = {
       :command           => :broadcast,
-      :body              => params[:chat_input],
+      :body              => sanitize(auto_link(auto_image(params[:chat_input])), :tags => %w(a img), :attributes => %w(href src alt)),
       :name              => current_user.name,
       :profile_image_url => current_user.profile_image_url,
       :type              => :to_channels_without_signature, 

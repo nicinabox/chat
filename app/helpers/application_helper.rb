@@ -1,5 +1,4 @@
 module ApplicationHelper
-  
   def auto_image msg
     unless msg.blank?
       img_url = /(^https?:\/\/(?:[a-z\-]+\.)+[a-z]{2,6}(?:\/[^\/#?]+)+\.(?:jpe?g|gif|png))/
