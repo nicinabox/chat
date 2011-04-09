@@ -16,7 +16,7 @@ class ChatsController < ApplicationController
       :body              => sanitize(auto_link(auto_image(params[:chat_input])), :tags => %w(a img), :attributes => %w(href src alt)),
       :name              => current_user.name,
       :profile_image_url => current_user.profile_image_url,
-      :twitter_login     => current_user.twitter_login,
+      :twitter_login     => current_user.login,
       :type              => :to_channels_without_signature, 
       :channels          => 'groupon_go'
     }
