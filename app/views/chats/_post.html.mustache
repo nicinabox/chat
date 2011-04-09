@@ -1,7 +1,12 @@
 <li>
   <span class='byline'>
-    <img src="{{ profile_image_url }}" width="30" height="30" title="{{ name }}">
-    {{ name }}
+    <div class="img_wrapper">
+      <img src="{{ profile_image_url }}" width="30" height="30" title="{{ name }}">
+    </div>  
+    <div class="user_name">
+      {{ name }}
+    </div>
+
   </span>
   <div class='message'>
     {{{ chat_input }}}
