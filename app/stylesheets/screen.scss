@@ -61,7 +61,7 @@ h1 {
   li {
     @include clearfix;
     font-size: 14px;
-    padding: 6px 0;
+    padding: 10px;
     border-top: 1px solid #eee;
     color: #444;
     &:nth-child(even) {
@@ -69,13 +69,30 @@ h1 {
     }
     .byline {
       @include column(3);
-      padding-right: 15px;
+
       font-weight: bold;
       font-size: 12px;
       img {
-        vertical-align: middle;
         margin-right: 5px;
       }
+      .img_wrapper {
+        margin-left: 3px;
+        padding: 3px;
+        @include box-shadow(#999, 0px, 1px, 3px);
+        @include border-radius(3px);
+        @include linear-gradient(color-stops(#eee, #fff), bottom);
+        width: 30px;
+        float: left;
+        margin-right: 8px;
+        
+        img {
+          @include border-radius(3px);
+          vertical-align: middle;
+          
+        }
+      
+      }
+        
     }
     .message {
       @include column(17);
