@@ -1,4 +1,5 @@
 class ChatsController < ApplicationController
+  before_filter :login_required
   protect_from_forgery :except => :post
   respond_to :json
 
