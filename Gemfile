@@ -14,6 +14,7 @@ gem 'juggernaut'
 gem 'pusher'
 
 gem 'haml'
+gem 'compass'
 
 group :development, :test do
   gem 'rspec-rails'
