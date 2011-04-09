@@ -26,20 +26,68 @@ $(function() {
   });
   
   $('#chat_input').focus();
-});
-
-$(function() {
+  
   $("#chat_input").keyup(function(e){
+    key = e.keyCode
+    if (key == 38) {
+      $('#reply .current').trigger('#down')
+      return
+    }
+    if (key == 40) {
+      $('#reply .current').trigger('#up')
+      return
+    }
+    
     if($(this).val().match(/@[\S]+/i)){
+      var html = '';
       var q = $(this).val().match(/(?:@)([\S]+)/i)[1]
+      
       $.get('/users.json?q=' + q, function(data){
-        var current_val = $('#chat_input').val()
-
-        //$('#chat_input').val(current_val.replace(q, data[0].name))
+        users = [
+          {
+            id: 3,
+            name: "Test user"
+          },
+          {
+            id: 3,
+            name: "Test user 2"
+          },
+          {
+            id: 3,
+            name: "Test user 3"
+          }
+        ]
+        data = users
+        for (var i=0; i < data.length; i++) {
+          if (data[i]) {
+            html += '<li>'+data[i].name+'</li>' 
+          }
+        }
+        $('#reply').html(html).show();
+        $('#reply li').first().addClass('current')
       })
     }
+  
+  
+  
+  })
+  $('#reply .current').live('#down', function() {
+    if ($(this) == $('#reply li').last()) {
+      return
+    }
+    $(this).removeClass('current')
+    $(this).next('li').addClass('current')
+  })
+  $('#reply .current').live('#up', function() {
+    if ($(this) == $('#reply li').first()) {
+      return
+    }
+    $(this).removeClass('current')
+    $(this).prev('li').addClass('current')
   })
 });
+
+// TODO: hide reply on empty
 
 
 (function($) {
@@ -69,12 +117,7 @@ pusher.bind('new_post',
       chat_input: data.body,
       time_ago: 'less than a minute'
     };
-    if (mobile) {
-      $('#chat_data').append(Mustache.to_html(tmpl, post));
-    } else {
-      $('#chat_data').prepend(Mustache.to_html(tmpl, post));
-    }
-    
+    $('#chat_data').prepend(Mustache.to_html(tmpl, post));
   }
 );
 

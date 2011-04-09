@@ -77,12 +77,16 @@ a {
     background: image-url('indicator.gif') no-repeat;
   }
   #reply {
+    display: none;
     position: absolute;
     background: white;
     width: 750px;
     border: 1px solid silver;
     padding: 10px;
     top: 40px;
+    .current {
+      background: silver;
+    }
   }
 }
 #chat_data {
