@@ -65,6 +65,9 @@ h1 {
     }
     .message {
       @include column(16);
+      img{
+        max-width:200px;
+      }
     }
     .timestamp {
       text-align: right;
