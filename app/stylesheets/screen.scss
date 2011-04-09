@@ -83,7 +83,7 @@ h1 {
       background: #f5fafe;
     }
     .byline {
-      @include column(3);
+      @include column(4);
       line-height: 14px;
       font-weight: bold;
       font-size: 12px;
@@ -106,6 +106,9 @@ h1 {
       }
       .user_name {
         padding-top: 3px;
+        a {
+          display: block;
+        }
       }
       .login {
         text-decoration: none;
@@ -119,7 +122,7 @@ h1 {
       }
     }
     .message {
-      @include column(17);
+      @include column(16);
       img{
         max-width:200px;
       }
