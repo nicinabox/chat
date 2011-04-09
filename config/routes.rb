@@ -18,6 +18,8 @@ Go::Application.routes.draw do
 
   resources :posts
 
+  match "/mustache_templates.js" => MustacheCacher
+
   # Sample resource route with options:
   #   resources :products do
   #     member do

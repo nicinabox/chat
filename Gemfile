@@ -9,9 +9,9 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'twitter-auth', :path => 'vendor/gems', :require => "twitter_auth/engine"
 
-gem 'juggernaut'
-
 gem 'pusher'
+
+gem 'mustache'
 
 gem 'haml'
 gem 'compass'
