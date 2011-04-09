@@ -12,6 +12,14 @@
 #define kOAuthConsumerKey        @"StQR6yZ9xgRkqFHI8TO1w"
 #define kOAuthConsumerSecret    @"byWDt5n6Z3RqHn9IcwPSGiABX0fiHdfqFmflwfLA"
 
+
+@implementation UINavigationBar (CustomImage)
+- (void)drawRect:(CGRect)rect {
+    UIImage *image = [UIImage imageNamed: @"bg_navbar_logo.png"];
+    [image drawInRect:rect];
+}
+@end
+
 @implementation RootViewController
 
 @synthesize name;
@@ -31,7 +39,7 @@
 	
 	self.title = @"Groupon Go";
 	
-	messages = [[NSMutableArray alloc] initWithObjects:@"jonahgrant", @"to_morrow", @"joshpuckett", @"marekdzik", nil];
+	messages = [[NSMutableArray alloc] initWithObjects:@"jonahgrant", @"groupon", @"to_morrow", @"joshpuckett", @"marekdzik", nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
