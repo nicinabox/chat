@@ -106,6 +106,8 @@
 		ABF2A0D01350AB3D00A2E73F /* Bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF2A0CF1350AB3D00A2E73F /* Bg@2x.png */; };
 		ABF2A0F51350AC4500A2E73F /* bg_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF2A0F31350AC4400A2E73F /* bg_avatar.png */; };
 		ABF2A0F61350AC4500A2E73F /* bg_avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF2A0F41350AC4500A2E73F /* bg_avatar@2x.png */; };
+		ABF2A1681350B07200A2E73F /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF2A1661350B07200A2E73F /* navbar.png */; };
+		ABF2A1691350B07200A2E73F /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF2A1671350B07200A2E73F /* navbar@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -306,11 +308,14 @@
 		AB80AD1713502A39007AEB44 /* GrouponGoRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrouponGoRequest.m; sourceTree = "<group>"; };
 		AB80AD1813502A57007AEB44 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		AB80AD1913502A57007AEB44 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
-		ABF2A0B51350AAEF00A2E73F /* bg_navbar_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_navbar_logo.png; sourceTree = "<group>"; };
-		ABF2A0B61350AAEF00A2E73F /* bg_navbar_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_navbar_logo@2x.png"; sourceTree = "<group>"; };
 		ABF2A0CF1350AB3D00A2E73F /* Bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bg@2x.png"; sourceTree = "<group>"; };
 		ABF2A0F31350AC4400A2E73F /* bg_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_avatar.png; sourceTree = "<group>"; };
 		ABF2A0F41350AC4500A2E73F /* bg_avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_avatar@2x.png"; sourceTree = "<group>"; };
+		ABF2A1501350AF9200A2E73F /* ZTLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTLog.h; sourceTree = "<group>"; };
+		ABF2A1511350AF9300A2E73F /* ZTWebSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTWebSocket.h; sourceTree = "<group>"; };
+		ABF2A1521350AF9300A2E73F /* ZTWebSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTWebSocket.m; sourceTree = "<group>"; };
+		ABF2A1661350B07200A2E73F /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar.png; sourceTree = "<group>"; };
+		ABF2A1671350B07200A2E73F /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,10 +388,10 @@
 			isa = PBXGroup;
 			children = (
 				AB80AA2213501099007AEB44 /* Images */,
+				ABF2A1661350B07200A2E73F /* navbar.png */,
+				ABF2A1671350B07200A2E73F /* navbar@2x.png */,
 				ABF2A0F31350AC4400A2E73F /* bg_avatar.png */,
 				ABF2A0F41350AC4500A2E73F /* bg_avatar@2x.png */,
-				ABF2A0B51350AAEF00A2E73F /* bg_navbar_logo.png */,
-				ABF2A0B61350AAEF00A2E73F /* bg_navbar_logo@2x.png */,
 				ABF2A0CF1350AB3D00A2E73F /* Bg@2x.png */,
 				28F335F01007B36200424DE2 /* RootViewController.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
@@ -415,6 +420,7 @@
 		AB80A85213500573007AEB44 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				ABF2A14C1350AF8000A2E73F /* PusherAPp */,
 				AB80ACF113502584007AEB44 /* GrouponGo API */,
 				AB80AC5A13501BE7007AEB44 /* AsyncImageView */,
 				AB80AB0713501734007AEB44 /* Reachability */,
@@ -745,6 +751,24 @@
 			name = "GrouponGo API";
 			sourceTree = "<group>";
 		};
+		ABF2A14C1350AF8000A2E73F /* PusherAPp */ = {
+			isa = PBXGroup;
+			children = (
+				ABF2A14F1350AF9200A2E73F /* ZTWebSocket */,
+			);
+			name = PusherAPp;
+			sourceTree = "<group>";
+		};
+		ABF2A14F1350AF9200A2E73F /* ZTWebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				ABF2A1501350AF9200A2E73F /* ZTLog.h */,
+				ABF2A1511350AF9300A2E73F /* ZTWebSocket.h */,
+				ABF2A1521350AF9300A2E73F /* ZTWebSocket.m */,
+			);
+			name = ZTWebSocket;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -816,6 +840,8 @@
 				ABF2A0D01350AB3D00A2E73F /* Bg@2x.png in Resources */,
 				ABF2A0F51350AC4500A2E73F /* bg_avatar.png in Resources */,
 				ABF2A0F61350AC4500A2E73F /* bg_avatar@2x.png in Resources */,
+				ABF2A1681350B07200A2E73F /* navbar.png in Resources */,
+				ABF2A1691350B07200A2E73F /* navbar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -953,6 +979,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
@@ -966,6 +993,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
