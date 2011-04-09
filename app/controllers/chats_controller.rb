@@ -12,6 +12,7 @@ class ChatsController < ApplicationController
     post_data = {
       :command   => :broadcast,
       :body      => params[:chat_input],
+      :name      => current_user.name,
       :type      => :to_channels_without_signature, 
       :channels  => 'groupon_go'
     }
