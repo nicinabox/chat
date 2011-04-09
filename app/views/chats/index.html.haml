@@ -1,11 +1,14 @@
 #container
 
-  #intro Welcome to Groupon Go -- we're hacking on a real-time chat app in realtime, for real. 
-  The project itself is 
-  = link_to("on Github","https://github.com/groupon/chat") 
-  and we've got a backlog going in 
-  = link_to("Pivotal Tracker.","https://www.pivotaltracker.com/projects/270327")
-  Feel free to grab stories and send pull requests—we'll be merging and redeploying all day.
+  #intro 
+    %h1
+      Welcome to Groupon Go -- we're hacking on a real-time chat app in realtime, for real. 
+    %p
+      The project itself is 
+      = link_to("on Github","https://github.com/groupon/chat") 
+      and we've got a backlog going in 
+      = link_to("Pivotal Tracker.","https://www.pivotaltracker.com/projects/270327")
+      Feel free to grab stories and send pull requests—we'll be merging and redeploying all day.
 
   #type_wrapper
     - form_tag send_data_chat_path(:format => :json), :id => 'message_post_form' do
@@ -16,6 +19,7 @@
   %ul#chat_data
     - @posts.each do |post|
       %li
-        = "#{post.user.name} said: "
+        %span.byline
+          = "#{post.user.name}"
         = auto_link(post.chat_input)
 

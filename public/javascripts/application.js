@@ -5,6 +5,7 @@ $(function() {
       console.log(response);
     });
   });
+  $('#chat_input').focus();
 });
 
 
