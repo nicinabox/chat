@@ -278,7 +278,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {320, 674}}</string>
+							<string>{{0, 0}, {320, 698}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -290,14 +290,14 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {337, 692}}</string>
+						<string>{{0, 0}, {337, 716}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
 							<real>320</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>0 145 1058 733 0 0 1440 878 </string>
+						<string>0 121 1301 757 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -327,7 +327,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>ABF2A3761350C2FA00A2E73F</string>
+										<string>ABF2A3A51350C79D00A2E73F</string>
 										<key>history</key>
 										<array>
 											<string>AB80A89C13500584007AEB44</string>
@@ -386,14 +386,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {716, 687}}</string>
+								<string>{{0, 0}, {959, 711}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 145 1058 733 0 0 1440 878 </string>
+								<string>0 121 1301 757 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>687pt</string>
+							<string>711pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -406,9 +406,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 692}, {716, 0}}</string>
+								<string>{{0, 716}, {959, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 145 1058 733 0 0 1440 878 </string>
+								<string>0 121 1301 757 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -417,7 +417,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>716pt</string>
+					<string>959pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -572,17 +572,16 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>ABF2A36C1350C25300A2E73F</string>
 		<string>ABF2A0CE1350AB2A00A2E73F</string>
 		<string>ABF2A0CB1350AB0B00A2E73F</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>AB80A83D135004AB007AEB44</string>
 		<string>AB80AC9313502078007AEB44</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/jonahgrant/chat/iPhone/GrouponGo/GrouponGo.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>0 145 1058 733 0 0 1440 878 </string>
+	<string>0 121 1301 757 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -928,18 +927,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {650, 209}}</string>
+								<string>{{0, 0}, {625, 480}}</string>
 								<key>RubberWindowFrame</key>
-								<string>765 534 650 250 0 0 1440 878 </string>
+								<string>765 263 625 521 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
 							<key>Proportion</key>
-							<string>209pt</string>
+							<string>480pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>209pt</string>
+					<string>480pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -959,11 +958,11 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>765 534 650 250 0 0 1440 878 </string>
+			<string>765 263 625 521 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
