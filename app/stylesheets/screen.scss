@@ -4,3 +4,26 @@
  @include container;
  @include helvetica; 
 }
+
+#type_wrapper {
+  @include clearfix;
+  margin: 20px 0;
+  outline: none;
+  input {
+    padding: 10px;
+    @include border-radius(3px);
+    border: 2px solid silver;
+    &[type="text"] {
+      @include column(19);
+    }
+    &[type="submit"] {
+      @include column(4, true);
+    }
+  }
+}
+#chat_data {
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+  }
+}
