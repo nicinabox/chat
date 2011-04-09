@@ -1,8 +1,9 @@
 #container
-  - form_tag send_data_chat_path(:format => :json), :id => 'message_post_form' do
-    = text_field_tag :chat_input, ''
-    = hidden_field_tag :user_id, 1
-    = submit_tag 'Post'
+  #type_wrapper
+    - form_tag send_data_chat_path(:format => :json), :id => 'message_post_form' do
+      = text_field_tag :chat_input, ''
+      = hidden_field_tag :user_id, 1
+      = submit_tag 'Post'
 
   %ul#chat_data
     - @posts.each do |post|
