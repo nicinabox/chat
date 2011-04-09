@@ -1,6 +1,40 @@
 @import "partials/base";
 
+body {
+  @include helvetica; 
+  border-top: 3px solid #222;
+  line-height: 20px;
+}
 #container {
  @include container;
- @include helvetica; 
+ margin-top: 20px;
+}
+
+#type_wrapper {
+  @include clearfix;
+  margin: 20px 0;
+  outline: none;
+  input {
+    padding: 10px;
+    @include border-radius(3px);
+    border: 2px solid #ddd;
+    &[type="text"] {
+      @include column(19);
+      &:focus {
+        border-color: #3597f3;
+      }
+    }
+    &[type="submit"] {
+      @include column(4, true);
+    }
+  }
+}
+#chat_data {
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    &:nth-child(even) {
+      background: #f5fafe;
+    }
+  }
 }
