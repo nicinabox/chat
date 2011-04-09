@@ -45,6 +45,7 @@ h1 {
 }
 #chat_data {
   li {
+    @include clearfix;
     font-size: 14px;
     padding: 6px 0;
     border-top: 1px solid #eee;
@@ -53,12 +54,27 @@ h1 {
       background: #f5fafe;
     }
     .byline {
+      @include column(3);
       padding-right: 15px;
       font-weight: bold;
       font-size: 12px;
       img {
         vertical-align: middle;
         margin-right: 5px;
+      }
+    }
+    .message {
+      @include column(16);
+    }
+    .timestamp {
+      text-align: right;
+      @include column(4, true);
+      color: silver;
+      font-size: 11px;
+    }
+    &:hover {
+      .timestamp {
+        color: #666;
       }
     }
   }
