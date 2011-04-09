@@ -36,7 +36,7 @@ $(function() {
 
 var pusher = new Pusher('534d197146cf867179ee');
 
-var channel = pusher.subscribe('groupon_go');
+var channel = pusher.subscribe('groupon_gov');
 
 pusher.bind('new_post',
   function(data) {
@@ -50,6 +50,4 @@ pusher.bind('new_post',
     $('#chat_data').prepend(Mustache.to_html(tmpl, post));
   }
 );
-
-
 
