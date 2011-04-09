@@ -1,5 +1,8 @@
 @import "partials/mobile_base";
 
+body {
+  @include helvetica;
+}
 #type_wrapper {
   width: 320px;
   float: right;
