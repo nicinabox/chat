@@ -16,7 +16,6 @@
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
 		AB80A8AA135005C6007AEB44 /* SSLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB80A8A9135005C6007AEB44 /* SSLineView.m */; };
-		AB80A90113500B7B007AEB44 /* Bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB80A90013500B7B007AEB44 /* Bg@2x.png */; };
 		AB80A9BE13500CF2007AEB44 /* jQueryInject.txt in Resources */ = {isa = PBXBuildFile; fileRef = AB80A98413500CF2007AEB44 /* jQueryInject.txt */; };
 		AB80A9BF13500CF2007AEB44 /* jQueryInjectLandscape.txt in Resources */ = {isa = PBXBuildFile; fileRef = AB80A98513500CF2007AEB44 /* jQueryInjectLandscape.txt */; };
 		AB80A9C013500CF2007AEB44 /* libOAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB80A98613500CF2007AEB44 /* libOAuth.a */; };
@@ -104,6 +103,9 @@
 		AB80AC6813501BE7007AEB44 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = AB80AC6313501BE7007AEB44 /* white.png */; };
 		AB80ACCA135022E1007AEB44 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB80ACC9135022E1007AEB44 /* QuartzCore.framework */; };
 		AB80AD1A13502A57007AEB44 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = AB80AD1913502A57007AEB44 /* Constants.m */; };
+		ABF2A0D01350AB3D00A2E73F /* Bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF2A0CF1350AB3D00A2E73F /* Bg@2x.png */; };
+		ABF2A0F51350AC4500A2E73F /* bg_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF2A0F31350AC4400A2E73F /* bg_avatar.png */; };
+		ABF2A0F61350AC4500A2E73F /* bg_avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF2A0F41350AC4500A2E73F /* bg_avatar@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,7 +124,6 @@
 		8D1107310486CEB800E47090 /* GrouponGo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GrouponGo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		AB80A8A8135005C6007AEB44 /* SSLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLineView.h; sourceTree = SOURCE_ROOT; };
 		AB80A8A9135005C6007AEB44 /* SSLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSLineView.m; sourceTree = SOURCE_ROOT; };
-		AB80A90013500B7B007AEB44 /* Bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bg@2x.png"; sourceTree = SOURCE_ROOT; };
 		AB80A98413500CF2007AEB44 /* jQueryInject.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jQueryInject.txt; sourceTree = "<group>"; };
 		AB80A98513500CF2007AEB44 /* jQueryInjectLandscape.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jQueryInjectLandscape.txt; sourceTree = "<group>"; };
 		AB80A98613500CF2007AEB44 /* libOAuth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOAuth.a; sourceTree = "<group>"; };
@@ -305,6 +306,11 @@
 		AB80AD1713502A39007AEB44 /* GrouponGoRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrouponGoRequest.m; sourceTree = "<group>"; };
 		AB80AD1813502A57007AEB44 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		AB80AD1913502A57007AEB44 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		ABF2A0B51350AAEF00A2E73F /* bg_navbar_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_navbar_logo.png; sourceTree = "<group>"; };
+		ABF2A0B61350AAEF00A2E73F /* bg_navbar_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_navbar_logo@2x.png"; sourceTree = "<group>"; };
+		ABF2A0CF1350AB3D00A2E73F /* Bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bg@2x.png"; sourceTree = "<group>"; };
+		ABF2A0F31350AC4400A2E73F /* bg_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_avatar.png; sourceTree = "<group>"; };
+		ABF2A0F41350AC4500A2E73F /* bg_avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_avatar@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,7 +383,11 @@
 			isa = PBXGroup;
 			children = (
 				AB80AA2213501099007AEB44 /* Images */,
-				AB80A90013500B7B007AEB44 /* Bg@2x.png */,
+				ABF2A0F31350AC4400A2E73F /* bg_avatar.png */,
+				ABF2A0F41350AC4500A2E73F /* bg_avatar@2x.png */,
+				ABF2A0B51350AAEF00A2E73F /* bg_navbar_logo.png */,
+				ABF2A0B61350AAEF00A2E73F /* bg_navbar_logo@2x.png */,
+				ABF2A0CF1350AB3D00A2E73F /* Bg@2x.png */,
 				28F335F01007B36200424DE2 /* RootViewController.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* GrouponGo-Info.plist */,
@@ -787,7 +797,6 @@
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
-				AB80A90113500B7B007AEB44 /* Bg@2x.png in Resources */,
 				AB80A9BE13500CF2007AEB44 /* jQueryInject.txt in Resources */,
 				AB80A9BF13500CF2007AEB44 /* jQueryInjectLandscape.txt in Resources */,
 				AB80AA2A13501099007AEB44 /* EntryBackground@2x.png in Resources */,
@@ -804,6 +813,9 @@
 				AB80AAFD135016F9007AEB44 /* Readme.markdown in Resources */,
 				AB80AC0913501B1F007AEB44 /* TableCell.xib in Resources */,
 				AB80AC6813501BE7007AEB44 /* white.png in Resources */,
+				ABF2A0D01350AB3D00A2E73F /* Bg@2x.png in Resources */,
+				ABF2A0F51350AC4500A2E73F /* bg_avatar.png in Resources */,
+				ABF2A0F61350AC4500A2E73F /* bg_avatar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
