@@ -46,16 +46,20 @@ h1 {
 #chat_data {
   li {
     font-size: 14px;
-    padding: 8px 0;
+    padding: 6px 0;
     border-top: 1px solid #eee;
     color: #444;
     &:nth-child(even) {
       background: #f5fafe;
     }
     .byline {
-      padding-right: 12px;
+      padding-right: 15px;
       font-weight: bold;
       font-size: 12px;
+      img {
+        vertical-align: middle;
+        margin-right: 5px;
+      }
     }
   }
 }

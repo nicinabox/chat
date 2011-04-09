@@ -20,6 +20,6 @@
     - @posts.each do |post|
       %li
         %span.byline
-          = "#{post.user.name}"
+          =raw "#{image_tag post.user.profile_image_url, :size => "30x30"} #{post.user.name}"
         = auto_link(post.chat_input)
 
