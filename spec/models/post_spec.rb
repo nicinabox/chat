@@ -1,12 +1,11 @@
 require 'spec_helper'
 
 describe Post do
-  before(:each) do
-    @post = Factory(:post)
-  end
   
-  it "can instantiate" do
-    @post.should_not be_nil
+  it "requires chat input" do
+    User.delete_all
+    Post.delete_all
+    Post.new.should_not be_valid
+    Post.new(:chat_input => "Hi!", :user => Factory(:user)).should be_valid
   end
-  
 end
