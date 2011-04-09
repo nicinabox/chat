@@ -20,4 +20,4 @@
 
   %ul#chat_data
     - @posts.each do |post|
-      = raw Mustache.render(File.read('./app/views/chats/_post.html.mustache'), {:profile_image_url => post.user.profile_image_url, :name => post.user.name, :chat_input => post.chat_input, :time_ago => time_ago_in_words(post.created_at)})
+      = raw Mustache.render(File.read('./app/views/chats/_post.html.mustache'), {:profile_image_url => post.user.profile_image_url, :name => post.user.name, :chat_input => auto_link(auto_image(post.chat_input)), :time_ago => time_ago_in_words(post.created_at)})
