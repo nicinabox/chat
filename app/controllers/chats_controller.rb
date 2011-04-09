@@ -10,7 +10,7 @@ class ChatsController < ApplicationController
   end
   
   def send_data
-    msg = sanitize(auto_link(auto_image(params[:chat_input])), :tags => %w(a img), :attributes => %w(href src alt))
+    msg = sanitize(auto_link(auto_image(params[:chat_input]), :html => { :target => '_blank' }), :tags => %w(a img), :attributes => %w(href src alt target))
     @post = current_user.posts.create!(:chat_input => msg)
     post_data = {
       :command           => :broadcast,
