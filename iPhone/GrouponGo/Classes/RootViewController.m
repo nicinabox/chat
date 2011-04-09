@@ -76,15 +76,15 @@
 	[textField release];
 	
 	send = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
-	send.frame = CGRectMake(self.view.frame.size.width - 65.0, 382, 59.0, 27.0);
+	send.frame = CGRectMake(self.view.frame.size.width - 65.0, 382, 59.0, 29.0);
 	send.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
 	send.titleLabel.font = [UIFont boldSystemFontOfSize:16.0];
 	send.titleLabel.shadowOffset = CGSizeMake(0.0, -1.0);
-	[send setBackgroundImage:[[UIImage imageNamed:@"SSMessagesViewControllerSendButtonBackground.png"] stretchableImageWithLeftCapWidth:12 topCapHeight:0] forState:UIControlStateNormal];
+	[send setBackgroundImage:[[UIImage imageNamed:@"btn_send.png"] stretchableImageWithLeftCapWidth:12 topCapHeight:0] forState:UIControlStateNormal];
 	[send setTitle:@"Send" forState:UIControlStateNormal];
 	[send addTarget:nil action:@selector(sendMessage) forControlEvents:UIControlEventTouchUpInside];
 	[send setTitleColor:[UIColor colorWithWhite:1.0 alpha:0.4] forState:UIControlStateNormal];
-	[send setTitleShadowColor:[UIColor colorWithRed:0.325 green:0.463 blue:0.675 alpha:1.0] forState:UIControlStateNormal];
+	[send setTitleShadowColor:[UIColor colorWithWhite:0.5 alpha:1] forState:UIControlStateNormal];
 	[self.view addSubview:send];
 	
 	NSIndexPath *scrollIndexPath = [NSIndexPath indexPathForRow:([messages count] - 1) inSection:0];
@@ -282,7 +282,7 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [textField resignFirstResponder];
 	/*
 	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
      // ...
