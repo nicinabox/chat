@@ -1,530 +1,0 @@
-TGo
-v7
-r0
-t323993040.517424
-cCheck dependencies
-cProcessInfoPlistFile /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/Info.plist Go-Info.plist
-cCompileXIB /Users/jonahgrant/Desktop/chat/Go/MainWindow.xib
-cCompileXIB /Users/jonahgrant/Desktop/chat/Go/GoViewController.xib
-cCpResource build/Debug-iphonesimulator/Go.app/EntryBackground@2x.png Images/EntryBackground@2x.png
-cCpResource build/Debug-iphonesimulator/Go.app/SSMessagesViewControllerSendButtonBackground@2x.png Images/SSMessagesViewControllerSendButtonBackground@2x.png
-cCpResource build/Debug-iphonesimulator/Go.app/SSMessagesViewControllerSendButtonBackground.png Images/SSMessagesViewControllerSendButtonBackground.png
-cCpResource build/Debug-iphonesimulator/Go.app/SSMessagesViewControllerTextFieldBackground@2x.png Images/SSMessagesViewControllerTextFieldBackground@2x.png
-cCpResource build/Debug-iphonesimulator/Go.app/SSMessagesViewControllerTextFieldBackground.png Images/SSMessagesViewControllerTextFieldBackground.png
-cCpResource build/Debug-iphonesimulator/Go.app/SSMessageTableViewCellBackgroundGray.png Images/SSMessageTableViewCellBackgroundGray.png
-cCpResource build/Debug-iphonesimulator/Go.app/SSMessageTableViewCellBackgroundGreen.png Images/SSMessageTableViewCellBackgroundGreen.png
-cProcessPCH /var/folders/qZ/qZxnUPSOF5S8yEbSxrhL1U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Go_Prefix-cmbtonfehepygyghvrfhsljxhvja/Go_Prefix.pch.gch Go_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/main.o /Users/jonahgrant/Desktop/chat/Go/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/GoAppDelegate.o /Users/jonahgrant/Desktop/chat/Go/Classes/GoAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/GoViewController.o /Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/AsyncSocket.o /Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/httpClient.o /Users/jonahgrant/Desktop/chat/Go/httpClient.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/chatClient.o /Users/jonahgrant/Desktop/chat/Go/chatClient.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/Go normal i386
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
-c000000004D5C9B4E0000000000000110
-t1297914702
-s272
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetwork.h
-c000000004D54CF5900000000000004CF
-t1297403737
-s1231
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004D54CFFA00000000002999B0
-t1297403898
-s2726320
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004D54CFE5000000000029DA70
-t1297403877
-s2742896
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004D54CFB80000000000001466
-t1297403832
-s5222
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004D5615B40000000000000AA1
-t1297487284
-s2721
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004D5616030000000000766870
-t1297487363
-s7759984
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/arpa/inet.h
-c000000004D54C5040000000000001533
-t1297401092
-s5427
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/netdb.h
-c000000004D54C504000000000000307F
-t1297401092
-s12415
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/netinet/in.h
-c000000004D54D0E60000000000006BAC
-t1297404134
-s27564
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/sys/socket.h
-c000000004D54D0EB0000000000005ACF
-t1297404139
-s23247
-
-N/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.h
-c000000004D9F833C00000000000042A9
-t1302299452
-s17065
-i<Foundation/Foundation.h>
-
-N/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m
-c000000004D9F833C000000000001565E
-t1302299452
-s87646
-i"AsyncSocket.h"
-i<sys/socket.h>
-i<netinet/in.h>
-i<arpa/inet.h>
-i<netdb.h>
-i<CFNetwork/CFNetwork.h>
-
-N/Users/jonahgrant/Desktop/chat/Go/Classes/GoAppDelegate.h
-c000000004D9F85B900000000000001BF
-t1302300089
-s447
-i<UIKit/UIKit.h>
-
-N/Users/jonahgrant/Desktop/chat/Go/Classes/GoAppDelegate.m
-c000000004D9F85B90000000000000A8F
-t1302300089
-s2703
-i"GoAppDelegate.h"
-i"GoViewController.h"
-
-N/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.h
-c000000004D9F864D000000000000022A
-t1302300237
-s554
-i<UIKit/UIKit.h>
-i"chatClient.h"
-
-N/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m
-c000000004D9F85B900000000000005AB
-t1302300089
-s1451
-i"GoViewController.h"
-
-N/Users/jonahgrant/Desktop/chat/Go/GoViewController.xib
-c000000004D9F85B90000000000001A31
-t1302300089
-s6705
-
-N/Users/jonahgrant/Desktop/chat/Go/Go_Prefix.pch
-c000000004D9F85B900000000000000AD
-t1302300089
-s173
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/jonahgrant/Desktop/chat/Go/Images/EntryBackground@2x.png
-c000000004D9E91260000000000000112
-t1302237478
-s274
-
-N/Users/jonahgrant/Desktop/chat/Go/Images/SSMessageTableViewCellBackgroundGray.png
-c000000004CD7397E00000000000010D1
-t1289173374
-s4305
-
-N/Users/jonahgrant/Desktop/chat/Go/Images/SSMessageTableViewCellBackgroundGreen.png
-c000000004CD7397E000000000000118A
-t1289173374
-s4490
-
-N/Users/jonahgrant/Desktop/chat/Go/Images/SSMessagesViewControllerSendButtonBackground.png
-c000000004CD7397E0000000000000E3B
-t1289173374
-s3643
-
-N/Users/jonahgrant/Desktop/chat/Go/Images/SSMessagesViewControllerSendButtonBackground@2x.png
-c000000004D9E8D8C00000000000009A2
-t1302236556
-s2466
-
-N/Users/jonahgrant/Desktop/chat/Go/Images/SSMessagesViewControllerTextFieldBackground.png
-c000000004CD7397E0000000000000F02
-t1289173374
-s3842
-
-N/Users/jonahgrant/Desktop/chat/Go/Images/SSMessagesViewControllerTextFieldBackground@2x.png
-c000000004D9E8E2F0000000000000C69
-t1302236719
-s3177
-
-N/Users/jonahgrant/Desktop/chat/Go/MainWindow.xib
-c000000004D9F85B90000000000004DED
-t1302300089
-s19949
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app
-t2
-s0
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app.dSYM
-t2
-s0
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/EntryBackground@2x.png
-t1302300238
-s274
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/Go
-t2
-s0
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/GoViewController.nib
-t1302300238
-s1269
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/Info.plist
-t1302300237
-s571
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/MainWindow.nib
-t1302300238
-s1669
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/PkgInfo
-t1302300237
-s8
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/SSMessageTableViewCellBackgroundGray.png
-t1302300238
-s4305
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/SSMessageTableViewCellBackgroundGreen.png
-t1302300238
-s4490
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/SSMessagesViewControllerSendButtonBackground.png
-t1302300238
-s3643
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/SSMessagesViewControllerSendButtonBackground@2x.png
-t1302300238
-s2466
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/SSMessagesViewControllerTextFieldBackground.png
-t1302300238
-s3842
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/SSMessagesViewControllerTextFieldBackground@2x.png
-t1302300238
-s3177
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/AsyncSocket.o
-t1302300240
-s171136
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/Go.LinkFileList
-c000000004D9F864D00000000000002AA
-t1302300237
-s682
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/GoAppDelegate.o
-t1302300239
-s51936
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/GoViewController.o
-t1302300239
-s45540
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/chatClient.o
-t1302300239
-s13908
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/httpClient.o
-t1302300239
-s26248
-
-N/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/main.o
-t1302300239
-s6300
-
-N/Users/jonahgrant/Desktop/chat/Go/chatClient.h
-c000000004D9F833C0000000000000117
-t1302299452
-s279
-i<Foundation/Foundation.h>
-i"httpClient.h"
-
-N/Users/jonahgrant/Desktop/chat/Go/chatClient.m
-c000000004D9F833C0000000000000385
-t1302299452
-s901
-i"chatClient.h"
-
-N/Users/jonahgrant/Desktop/chat/Go/httpClient.h
-c000000004D9F833C00000000000003D3
-t1302299452
-s979
-i<Foundation/Foundation.h>
-
-N/Users/jonahgrant/Desktop/chat/Go/httpClient.m
-c000000004D9F833C0000000000000B77
-t1302299452
-s2935
-i"httpClient.h"
-
-N/Users/jonahgrant/Desktop/chat/Go/main.m
-c000000004D9F85B90000000000000162
-t1302300089
-s354
-i<UIKit/UIKit.h>
-
-N/var/folders/qZ/qZxnUPSOF5S8yEbSxrhL1U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Go_Prefix-cmbtonfehepygyghvrfhsljxhvja/Go_Prefix.pch.gch
-t1302300239
-s15814064
-
-NGo-Info.plist
-c000000004D9F85B9000000000000038D
-t1302300089
-s909
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies323993037#323993037#0(0"0(0#1#0"8771476160#0"0#
-
-CCompileC build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/AsyncSocket.o /Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s323993039.659991
-e323993040.119741
-r1
-xCompileC
-xbuild/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/AsyncSocket.o
-x/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m: In function '-[AsyncSocket connectToHost:onPort:withTimeout:error:]':
-o/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m:951: warning: format not a string literal and no format arguments
-o/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m:957: warning: format not a string literal and no format arguments
-o/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m: In function '-[AsyncSocket connectToAddress:withTimeout:error:]':
-o/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m:1004: warning: format not a string literal and no format arguments
-o/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m:1010: warning: format not a string literal and no format arguments
-lSLF07#2@55"Compile /Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m323993039#323993040#0(692"/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m: In function '-[AsyncSocket connectToHost:onPort:withTimeout:error:]':/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m:951: warning: format not a string literal and no format arguments/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m:957: warning: format not a string literal and no format arguments/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m: In function '-[AsyncSocket connectToAddress:withTimeout:error:]':/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m:1004: warning: format not a string literal and no format arguments/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m:1010: warning: format not a string literal and no format arguments4(22@51"Format not a string literal and no format arguments323993039#119#114#0(6@47"/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m323992252#951#0#951#0#51"format not a string literal and no format arguments0(22@51"Format not a string literal and no format arguments323993039#233#114#0(6@47"/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m323992252#957#0#957#0#51"format not a string literal and no format arguments0(22@51"Format not a string literal and no format arguments323993039#462#115#0(6@47"/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m323992252#1004#0#1004#0#51"format not a string literal and no format arguments0(22@51"Format not a string literal and no format arguments323993039#577#115#0(6@47"/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m323992252#1010#0#1010#0#51"format not a string literal and no format arguments0(0#0#47"/Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m8774397632#1773"    cd /Users/jonahgrant/Desktop/chat/Go    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-generated-files.hmap -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-own-target-headers.hmap -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-all-target-headers.hmap -iquote /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-project-headers.hmap -F/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator -I/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/include -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/DerivedSources/i386 -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/DerivedSources -include /var/folders/qZ/qZxnUPSOF5S8yEbSxrhL1U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Go_Prefix-cmbtonfehepygyghvrfhsljxhvja/Go_Prefix.pch -c /Users/jonahgrant/Desktop/chat/Go/AsyncSocket.m -o /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/AsyncSocket.o0#
-
-CCompileC build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/GoAppDelegate.o /Users/jonahgrant/Desktop/chat/Go/Classes/GoAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s323993039.506689
-e323993039.659900
-r1
-xCompileC
-xbuild/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/GoAppDelegate.o
-x/Users/jonahgrant/Desktop/chat/Go/Classes/GoAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@65"Compile /Users/jonahgrant/Desktop/chat/Go/Classes/GoAppDelegate.m323993039#323993039#0(0"0(0#0#57"/Users/jonahgrant/Desktop/chat/Go/Classes/GoAppDelegate.m8670224032#1785"    cd /Users/jonahgrant/Desktop/chat/Go    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-generated-files.hmap -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-own-target-headers.hmap -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-all-target-headers.hmap -iquote /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-project-headers.hmap -F/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator -I/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/include -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/DerivedSources/i386 -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/DerivedSources -include /var/folders/qZ/qZxnUPSOF5S8yEbSxrhL1U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Go_Prefix-cmbtonfehepygyghvrfhsljxhvja/Go_Prefix.pch -c /Users/jonahgrant/Desktop/chat/Go/Classes/GoAppDelegate.m -o /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/GoAppDelegate.o0#
-
-CCompileC build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/GoViewController.o /Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s323993039.565062
-e323993039.677626
-r1
-xCompileC
-xbuild/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/GoViewController.o
-x/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m:66: warning: property 'chatView' requires method '-chatView' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m:66: warning: property 'chatView' requires the method 'setChatView:' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m:66: warning: property 'messageField' requires method '-messageField' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m:66: warning: property 'messageField' requires the method 'setMessageField:' to be defined - use @synthesize, @dynamic or provide a method implementation
-o/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m:66: warning: incomplete implementation of class 'GoViewController'
-o/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m:66: warning: method definition for '-httpClientFailed:' not found
-o/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m:66: warning: method definition for '-httpClientSucceeded:messages:' not found
-o/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m:66: warning: class 'GoViewController' does not fully implement the 'HttpClientDelegate' protocol
-lSLF07#2@68"Compile /Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m323993039#323993039#0(1378"/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m:66: warning: property 'chatView' requires method '-chatView' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m:66: warning: property 'chatView' requires the method 'setChatView:' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m:66: warning: property 'messageField' requires method '-messageField' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m:66: warning: property 'messageField' requires the method 'setMessageField:' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m:66: warning: incomplete implementation of class 'GoViewController'/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m:66: warning: method definition for '-httpClientFailed:' not found/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m:66: warning: method definition for '-httpClientSucceeded:messages:' not found/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m:66: warning: class 'GoViewController' does not fully implement the 'HttpClientDelegate' protocol8(22@124"Property 'chatView' requires method '-chatView' to be defined - use @synthesize, @dynamic or provide a method implementation323993039#0#199#0(6@60"/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m323992889#66#0#66#0#0"0(22@131"Property 'chatView' requires the method 'setChatView:' to be defined - use @synthesize, @dynamic or provide a method implementation323993039#199#206#0(6@60"/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m323992889#66#0#66#0#0"0(22@132"Property 'messageField' requires method '-messageField' to be defined - use @synthesize, @dynamic or provide a method implementation323993039#405#207#0(6@60"/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m323992889#66#0#66#0#0"0(22@139"Property 'messageField' requires the method 'setMessageField:' to be defined - use @synthesize, @dynamic or provide a method implementation323993039#612#214#0(6@60"/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m323992889#66#0#66#0#0"0(22@53"Incomplete implementation of class 'GoViewController'323993039#826#128#0(6@60"/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m323992889#66#0#66#0#38"incomplete implementation of class '*'0(22@52"Method definition for '-httpClientFailed:' not found323993039#954#127#0(6@60"/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m323992889#66#0#66#0#35"method definition for '*' not found0(22@64"Method definition for '-httpClientSucceeded:messages:' not found323993039#1081#139#0(6@60"/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m323992889#66#0#66#0#35"method definition for '*' not found0(22@83"Class 'GoViewController' does not fully implement the 'HttpClientDelegate' protocol323993039#1220#158#0(6@60"/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m323992889#66#0#66#0#51"class '*' does not fully implement the '*' protocol0(0#0#60"/Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m8771875328#1791"    cd /Users/jonahgrant/Desktop/chat/Go    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-generated-files.hmap -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-own-target-headers.hmap -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-all-target-headers.hmap -iquote /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-project-headers.hmap -F/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator -I/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/include -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/DerivedSources/i386 -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/DerivedSources -include /var/folders/qZ/qZxnUPSOF5S8yEbSxrhL1U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Go_Prefix-cmbtonfehepygyghvrfhsljxhvja/Go_Prefix.pch -c /Users/jonahgrant/Desktop/chat/Go/Classes/GoViewController.m -o /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/GoViewController.o0#
-
-CCompileC build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/chatClient.o /Users/jonahgrant/Desktop/chat/Go/chatClient.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s323993039.798610
-e323993039.890041
-r1
-xCompileC
-xbuild/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/chatClient.o
-x/Users/jonahgrant/Desktop/chat/Go/chatClient.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@54"Compile /Users/jonahgrant/Desktop/chat/Go/chatClient.m323993039#323993039#0(0"0(0#0#46"/Users/jonahgrant/Desktop/chat/Go/chatClient.m8689448736#1771"    cd /Users/jonahgrant/Desktop/chat/Go    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-generated-files.hmap -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-own-target-headers.hmap -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-all-target-headers.hmap -iquote /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-project-headers.hmap -F/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator -I/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/include -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/DerivedSources/i386 -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/DerivedSources -include /var/folders/qZ/qZxnUPSOF5S8yEbSxrhL1U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Go_Prefix-cmbtonfehepygyghvrfhsljxhvja/Go_Prefix.pch -c /Users/jonahgrant/Desktop/chat/Go/chatClient.m -o /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/chatClient.o0#
-
-CCompileC build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/httpClient.o /Users/jonahgrant/Desktop/chat/Go/httpClient.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s323993039.677716
-e323993039.798526
-r1
-xCompileC
-xbuild/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/httpClient.o
-x/Users/jonahgrant/Desktop/chat/Go/httpClient.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@54"Compile /Users/jonahgrant/Desktop/chat/Go/httpClient.m323993039#323993039#0(0"0(0#0#46"/Users/jonahgrant/Desktop/chat/Go/httpClient.m8773247648#1771"    cd /Users/jonahgrant/Desktop/chat/Go    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-generated-files.hmap -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-own-target-headers.hmap -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-all-target-headers.hmap -iquote /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-project-headers.hmap -F/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator -I/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/include -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/DerivedSources/i386 -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/DerivedSources -include /var/folders/qZ/qZxnUPSOF5S8yEbSxrhL1U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Go_Prefix-cmbtonfehepygyghvrfhsljxhvja/Go_Prefix.pch -c /Users/jonahgrant/Desktop/chat/Go/httpClient.m -o /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/httpClient.o0#
-
-CCompileC build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/main.o /Users/jonahgrant/Desktop/chat/Go/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s323993039.504802
-e323993039.564962
-r1
-xCompileC
-xbuild/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/main.o
-x/Users/jonahgrant/Desktop/chat/Go/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@48"Compile /Users/jonahgrant/Desktop/chat/Go/main.m323993039#323993039#0(0"0(0#0#40"/Users/jonahgrant/Desktop/chat/Go/main.m8773943392#1759"    cd /Users/jonahgrant/Desktop/chat/Go    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-generated-files.hmap -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-own-target-headers.hmap -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-all-target-headers.hmap -iquote /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-project-headers.hmap -F/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator -I/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/include -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/DerivedSources/i386 -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/DerivedSources -include /var/folders/qZ/qZxnUPSOF5S8yEbSxrhL1U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Go_Prefix-cmbtonfehepygyghvrfhsljxhvja/Go_Prefix.pch -c /Users/jonahgrant/Desktop/chat/Go/main.m -o /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/main.o0#
-
-CCompileXIB /Users/jonahgrant/Desktop/chat/Go/GoViewController.xib
-s323993037.727408
-e323993038.376007
-r1
-xCompileXIB
-x/Users/jonahgrant/Desktop/chat/Go/GoViewController.xib
-lSLF07#2@31"CompileXIB GoViewController.xib323993037#323993038#0(0"0(0#0#54"/Users/jonahgrant/Desktop/chat/Go/GoViewController.xib8678898656#562"    cd /Users/jonahgrant/Desktop/chat/Go    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/GoViewController.nib /Users/jonahgrant/Desktop/chat/Go/GoViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
-
-CCompileXIB /Users/jonahgrant/Desktop/chat/Go/MainWindow.xib
-s323993037.726432
-e323993038.311438
-r1
-xCompileXIB
-x/Users/jonahgrant/Desktop/chat/Go/MainWindow.xib
-lSLF07#2@25"CompileXIB MainWindow.xib323993037#323993038#0(0"0(0#0#48"/Users/jonahgrant/Desktop/chat/Go/MainWindow.xib8687711936#550"    cd /Users/jonahgrant/Desktop/chat/Go    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/MainWindow.nib /Users/jonahgrant/Desktop/chat/Go/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
-
-CCpResource build/Debug-iphonesimulator/Go.app/EntryBackground@2x.png Images/EntryBackground@2x.png
-s323993038.311516
-e323993038.331260
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/Go.app/EntryBackground@2x.png
-xImages/EntryBackground@2x.png
-lSLF07#2@34"Copy Images/EntryBackground@2x.png323993038#323993038#0(0"0(0#0#63"/Users/jonahgrant/Desktop/chat/Go/Images/EntryBackground@2x.png8775960448#467"    cd /Users/jonahgrant/Desktop/chat/Go    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/jonahgrant/Desktop/chat/Go/Images/EntryBackground@2x.png /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app0#
-
-CCpResource build/Debug-iphonesimulator/Go.app/SSMessageTableViewCellBackgroundGray.png Images/SSMessageTableViewCellBackgroundGray.png
-s323993038.317261
-e323993038.358418
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/Go.app/SSMessageTableViewCellBackgroundGray.png
-xImages/SSMessageTableViewCellBackgroundGray.png
-lSLF07#2@52"Copy Images/SSMessageTableViewCellBackgroundGray.png323993038#323993038#0(0"0(0#0#81"/Users/jonahgrant/Desktop/chat/Go/Images/SSMessageTableViewCellBackgroundGray.png8688580096#485"    cd /Users/jonahgrant/Desktop/chat/Go    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/jonahgrant/Desktop/chat/Go/Images/SSMessageTableViewCellBackgroundGray.png /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app0#
-
-CCpResource build/Debug-iphonesimulator/Go.app/SSMessageTableViewCellBackgroundGreen.png Images/SSMessageTableViewCellBackgroundGreen.png
-s323993038.317918
-e323993038.358076
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/Go.app/SSMessageTableViewCellBackgroundGreen.png
-xImages/SSMessageTableViewCellBackgroundGreen.png
-lSLF07#2@53"Copy Images/SSMessageTableViewCellBackgroundGreen.png323993038#323993038#0(0"0(0#0#82"/Users/jonahgrant/Desktop/chat/Go/Images/SSMessageTableViewCellBackgroundGreen.png8684655360#486"    cd /Users/jonahgrant/Desktop/chat/Go    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/jonahgrant/Desktop/chat/Go/Images/SSMessageTableViewCellBackgroundGreen.png /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app0#
-
-CCpResource build/Debug-iphonesimulator/Go.app/SSMessagesViewControllerSendButtonBackground.png Images/SSMessagesViewControllerSendButtonBackground.png
-s323993038.313623
-e323993038.358274
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/Go.app/SSMessagesViewControllerSendButtonBackground.png
-xImages/SSMessagesViewControllerSendButtonBackground.png
-lSLF07#2@60"Copy Images/SSMessagesViewControllerSendButtonBackground.png323993038#323993038#0(0"0(0#0#89"/Users/jonahgrant/Desktop/chat/Go/Images/SSMessagesViewControllerSendButtonBackground.png8769616448#493"    cd /Users/jonahgrant/Desktop/chat/Go    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/jonahgrant/Desktop/chat/Go/Images/SSMessagesViewControllerSendButtonBackground.png /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app0#
-
-CCpResource build/Debug-iphonesimulator/Go.app/SSMessagesViewControllerSendButtonBackground@2x.png Images/SSMessagesViewControllerSendButtonBackground@2x.png
-s323993038.312434
-e323993038.356829
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/Go.app/SSMessagesViewControllerSendButtonBackground@2x.png
-xImages/SSMessagesViewControllerSendButtonBackground@2x.png
-lSLF07#2@63"Copy Images/SSMessagesViewControllerSendButtonBackground@2x.png323993038#323993038#0(0"0(0#0#92"/Users/jonahgrant/Desktop/chat/Go/Images/SSMessagesViewControllerSendButtonBackground@2x.png8772957568#496"    cd /Users/jonahgrant/Desktop/chat/Go    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/jonahgrant/Desktop/chat/Go/Images/SSMessagesViewControllerSendButtonBackground@2x.png /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app0#
-
-CCpResource build/Debug-iphonesimulator/Go.app/SSMessagesViewControllerTextFieldBackground.png Images/SSMessagesViewControllerTextFieldBackground.png
-s323993038.316634
-e323993038.358871
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/Go.app/SSMessagesViewControllerTextFieldBackground.png
-xImages/SSMessagesViewControllerTextFieldBackground.png
-lSLF07#2@59"Copy Images/SSMessagesViewControllerTextFieldBackground.png323993038#323993038#0(0"0(0#0#88"/Users/jonahgrant/Desktop/chat/Go/Images/SSMessagesViewControllerTextFieldBackground.png8690074272#492"    cd /Users/jonahgrant/Desktop/chat/Go    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/jonahgrant/Desktop/chat/Go/Images/SSMessagesViewControllerTextFieldBackground.png /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app0#
-
-CCpResource build/Debug-iphonesimulator/Go.app/SSMessagesViewControllerTextFieldBackground@2x.png Images/SSMessagesViewControllerTextFieldBackground@2x.png
-s323993038.315378
-e323993038.331375
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/Go.app/SSMessagesViewControllerTextFieldBackground@2x.png
-xImages/SSMessagesViewControllerTextFieldBackground@2x.png
-lSLF07#2@62"Copy Images/SSMessagesViewControllerTextFieldBackground@2x.png323993038#323993038#0(0"0(0#0#91"/Users/jonahgrant/Desktop/chat/Go/Images/SSMessagesViewControllerTextFieldBackground@2x.png8693029728#495"    cd /Users/jonahgrant/Desktop/chat/Go    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/jonahgrant/Desktop/chat/Go/Images/SSMessagesViewControllerTextFieldBackground@2x.png /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app0#
-
-CGenerateDSYMFile /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app.dSYM /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/Go
-r0
-
-CLd /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/Go normal i386
-s323993040.119820
-e323993040.517209
-r0
-xLd
-x/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/Go
-xnormal
-xi386
-oUndefined symbols:
-o  "_kCFStreamErrorDomainSystemConfiguration", referenced from:
-o      _kCFStreamErrorDomainSystemConfiguration$non_lazy_ptr in AsyncSocket.o
-o     (maybe you meant: _kCFStreamErrorDomainSystemConfiguration$non_lazy_ptr)
-o  "_kCFStreamPropertySSLSettings", referenced from:
-o      _kCFStreamPropertySSLSettings$non_lazy_ptr in AsyncSocket.o
-o     (maybe you meant: _kCFStreamPropertySSLSettings$non_lazy_ptr)
-o  "_kCFStreamErrorDomainNetServices", referenced from:
-o      _kCFStreamErrorDomainNetServices$non_lazy_ptr in AsyncSocket.o
-o     (maybe you meant: _kCFStreamErrorDomainNetServices$non_lazy_ptr)
-o  "_kCFStreamErrorDomainMach", referenced from:
-o      _kCFStreamErrorDomainMach$non_lazy_ptr in AsyncSocket.o
-o     (maybe you meant: _kCFStreamErrorDomainMach$non_lazy_ptr)
-o  "_kCFStreamErrorDomainNetDB", referenced from:
-o      _kCFStreamErrorDomainNetDB$non_lazy_ptr in AsyncSocket.o
-o     (maybe you meant: _kCFStreamErrorDomainNetDB$non_lazy_ptr)
-old: symbol(s) not found
-ocollect2: ld returned 1 exit status
-lSLF07#2@76"Link /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/Go323993040#323993040#0(1025"Undefined symbols:  "_kCFStreamErrorDomainSystemConfiguration", referenced from:      _kCFStreamErrorDomainSystemConfiguration$non_lazy_ptr in AsyncSocket.o     (maybe you meant: _kCFStreamErrorDomainSystemConfiguration$non_lazy_ptr)  "_kCFStreamPropertySSLSettings", referenced from:      _kCFStreamPropertySSLSettings$non_lazy_ptr in AsyncSocket.o     (maybe you meant: _kCFStreamPropertySSLSettings$non_lazy_ptr)  "_kCFStreamErrorDomainNetServices", referenced from:      _kCFStreamErrorDomainNetServices$non_lazy_ptr in AsyncSocket.o     (maybe you meant: _kCFStreamErrorDomainNetServices$non_lazy_ptr)  "_kCFStreamErrorDomainMach", referenced from:      _kCFStreamErrorDomainMach$non_lazy_ptr in AsyncSocket.o     (maybe you meant: _kCFStreamErrorDomainMach$non_lazy_ptr)  "_kCFStreamErrorDomainNetDB", referenced from:      _kCFStreamErrorDomainNetDB$non_lazy_ptr in AsyncSocket.o     (maybe you meant: _kCFStreamErrorDomainNetDB$non_lazy_ptr)ld: symbol(s) not foundcollect2: ld returned 1 exit status17(4@60""_kCFStreamErrorDomainSystemConfiguration", referenced from:323993040#19#63#0(6@0"323993040#0#0#0#0#0"0(13@70"_kCFStreamErrorDomainSystemConfiguration$non_lazy_ptr in AsyncSocket.o323993040#82#77#0(6@0"323993040#0#0#0#0#0"0(13@72"(maybe you meant: _kCFStreamErrorDomainSystemConfiguration$non_lazy_ptr)323993040#159#78#0(6@0"323993040#0#0#0#0#0"0(4@49""_kCFStreamPropertySSLSettings", referenced from:323993040#237#52#0(6@0"323993040#0#0#0#0#0"0(13@59"_kCFStreamPropertySSLSettings$non_lazy_ptr in AsyncSocket.o323993040#289#66#0(6@0"323993040#0#0#0#0#0"0(13@61"(maybe you meant: _kCFStreamPropertySSLSettings$non_lazy_ptr)323993040#355#67#0(6@0"323993040#0#0#0#0#0"0(4@52""_kCFStreamErrorDomainNetServices", referenced from:323993040#422#55#0(6@0"323993040#0#0#0#0#0"0(13@62"_kCFStreamErrorDomainNetServices$non_lazy_ptr in AsyncSocket.o323993040#477#69#0(6@0"323993040#0#0#0#0#0"0(13@64"(maybe you meant: _kCFStreamErrorDomainNetServices$non_lazy_ptr)323993040#546#70#0(6@0"323993040#0#0#0#0#0"0(4@45""_kCFStreamErrorDomainMach", referenced from:323993040#616#48#0(6@0"323993040#0#0#0#0#0"0(13@55"_kCFStreamErrorDomainMach$non_lazy_ptr in AsyncSocket.o323993040#664#62#0(6@0"323993040#0#0#0#0#0"0(13@57"(maybe you meant: _kCFStreamErrorDomainMach$non_lazy_ptr)323993040#726#63#0(6@0"323993040#0#0#0#0#0"0(4@46""_kCFStreamErrorDomainNetDB", referenced from:323993040#789#49#0(6@0"323993040#0#0#0#0#0"0(13@56"_kCFStreamErrorDomainNetDB$non_lazy_ptr in AsyncSocket.o323993040#838#63#0(6@0"323993040#0#0#0#0#0"0(13@58"(maybe you meant: _kCFStreamErrorDomainNetDB$non_lazy_ptr)323993040#901#64#0(6@0"323993040#0#0#0#0#0"0(13@19"Symbol(s) not found323993040#965#24#0(6@0"323993040#0#0#0#0#0"0(13@35"Collect2: ld returned 1 exit status323993040#989#36#0(6@0"323993040#0#0#0#0#0"0(0#0#0"8772836864#850"    cd /Users/jonahgrant/Desktop/chat/Go    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator -F/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator -filelist /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Objects-normal/i386/Go.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/Go1#
-
-CProcessInfoPlistFile /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/Info.plist Go-Info.plist
-s323993037.714874
-e323993037.726326
-r1
-xProcessInfoPlistFile
-x/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/Info.plist
-xGo-Info.plist
-lSLF07#2@21"Process Go-Info.plist323993037#323993037#0(0"0(0#0#47"/Users/jonahgrant/Desktop/chat/Go/Go-Info.plist30681223440564324#449"    cd /Users/jonahgrant/Desktop/chat/Go    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Go-Info.plist -genpkginfo /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app/Info.plist0#
-
-CProcessPCH /var/folders/qZ/qZxnUPSOF5S8yEbSxrhL1U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Go_Prefix-cmbtonfehepygyghvrfhsljxhvja/Go_Prefix.pch.gch Go_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s323993038.376121
-e323993039.504656
-r1
-xProcessPCH
-x/var/folders/qZ/qZxnUPSOF5S8yEbSxrhL1U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Go_Prefix-cmbtonfehepygyghvrfhsljxhvja/Go_Prefix.pch.gch
-xGo_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@24"Precompile Go_Prefix.pch323993038#323993039#0(0"0(0#0#47"/Users/jonahgrant/Desktop/chat/Go/Go_Prefix.pch8681608480#1661"    cd /Users/jonahgrant/Desktop/chat/Go    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-generated-files.hmap -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-own-target-headers.hmap -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-all-target-headers.hmap -iquote /Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/Go-project-headers.hmap -F/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator -I/Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/include -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/DerivedSources/i386 -I/Users/jonahgrant/Desktop/chat/Go/build/Go.build/Debug-iphonesimulator/Go.build/DerivedSources -c /Users/jonahgrant/Desktop/chat/Go/Go_Prefix.pch -o /var/folders/qZ/qZxnUPSOF5S8yEbSxrhL1U+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Go_Prefix-cmbtonfehepygyghvrfhsljxhvja/Go_Prefix.pch.gch0#
-
-CTouch /Users/jonahgrant/Desktop/chat/Go/build/Debug-iphonesimulator/Go.app
-r0
-
