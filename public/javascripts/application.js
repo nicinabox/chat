@@ -64,6 +64,7 @@ pusher.bind('new_post',
       profile_image_url: data.profile_image_url,
 			twitter_login: data.twitter_login,
       name: data.name,
+      login: data.twiter_login,
       chat_input: data.body,
       time_ago: 'less than a minute'
     };
