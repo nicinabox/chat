@@ -15,5 +15,6 @@
 
   %ul#chat_data
     - @posts.each do |post|
-      %li= post.chat_input
+      %li
+        = auto_link(post.chat_input)
 
