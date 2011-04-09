@@ -1,5 +1,5 @@
 class PostController < ApplicationController
-
+  before_filter :login_required
   def index
     @posts = Post.all.order(:created_at)
   end
