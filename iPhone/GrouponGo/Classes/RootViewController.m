@@ -42,16 +42,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	//if (eventsReceived == nil) {
-	//	eventsReceived = [[NSMutableArray alloc] init];
-	//}
-	//if (eventsChannel == nil) {
+	if (messages == nil) {
+		messages = [[NSMutableArray alloc] init];
+	}
+	if (eventsChannel == nil) {
 		eventsChannel = [PTPusher newChannel:@"groupon_go"];
 		eventsChannel.delegate = self;
+	}
 	[eventsChannel startListeningForEvents];
-	//}
 	
-	messages = [[NSMutableArray alloc] initWithObjects:@"jonahgrant", @"groupon", @"to_morrow", @"joshpuckett", @"marekdzik", nil];
+	//messages = [[NSMutableArray alloc] initWithObjects:@"jonahgrant", @"groupon", @"to_morrow", @"joshpuckett", @"marekdzik", nil];
 	
 	pusher = [[PTPusher alloc] initWithKey:@"534d197146cf867179ee" 
 								   channel:@"groupon_go"];
@@ -134,10 +134,10 @@
 	[send setTitleShadowColor:[UIColor colorWithWhite:0.5 alpha:1] forState:UIControlStateNormal];
 	[self.view addSubview:send];
 	
-	NSIndexPath *scrollIndexPath = [NSIndexPath indexPathForRow:([messages count] - 1) inSection:0];
-	[table scrollToRowAtIndexPath:scrollIndexPath
-				 atScrollPosition:UITableViewScrollPositionTop 
-						 animated:YES];
+	//NSIndexPath *scrollIndexPath = [NSIndexPath indexPathForRow:([messages count] - 1) inSection:0];
+	//[table scrollToRowAtIndexPath:scrollIndexPath
+	//			 atScrollPosition:UITableViewScrollPositionTop 
+	//					 animated:YES];
 	
 	/*NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:
 								[self methodSignatureForSelector: @selector(refresh)]];
@@ -208,12 +208,14 @@
 
 - (void)channel:(PTPusherChannel *)channel didReceiveEvent:(PTPusherEvent *)event;
 {
-	if ([event.name isEqualToString:@"new-event"]) {
+	if ([event.name isEqualToString:@"new_post"]) {
 		[table beginUpdates];
 		[messages insertObject:event atIndex:0];
+		NSLog(@"added the cell %@", event.name);
 		[table insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationTop];
 		[table endUpdates];
 	}
+	
 }
 
 - (void)channelDidConnect:(PTPusherChannel *)channel
@@ -364,12 +366,17 @@
 	
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 	//name.text = [prefs stringForKey:@"username"];
-	name.text = [messages objectAtIndex:indexPath.row];
-	message.text = [NSString stringWithFormat:@"Cell number %i", indexPath.row];
+	//name.text = [messages objectAtIndex:indexPath.row];
+	//message.text = [NSString stringWithFormat:@"Cell number %i", indexPath.row];
 		
-	if ([messages objectAtIndex:indexPath.row] == [prefs stringForKey:@"username"]) {
-		name.textAlignment = UITextAlignmentRight;
-	}
+	//if ([messages objectAtIndex:indexPath.row] == [prefs stringForKey:@"username"]) {
+	//	name.textAlignment = UITextAlignmentRight;
+	//}
+	
+	PTPusherEvent *event = [messages objectAtIndex:indexPath.row];
+	message.text = [event.data valueForKey:@"body"];
+	name.text = [event.data valueForKey:@"name"];
+
 	
 	[(AsyncImageView *)[cell.contentView viewWithTag:104] setBackgroundColor:[UIColor clearColor]];
 	//[[(AsyncImageView *)[cell.contentView viewWithTag:104] layer] setBorderColor:[UIColor whiteColor].CGColor];
