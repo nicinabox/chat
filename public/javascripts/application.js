@@ -2,14 +2,14 @@ $(function() {
   $('#chat_input').keypress(function(){
     $(this).removeAttr('style');
     $('.error').hide();
-  })
+  });
   
   $('#message_post_form').submit(function(e) {
     e.preventDefault();
-    var msg = $('#chat_input').val()
-    if (msg != "") {
+    var msg = $('#chat_input').val();
+    if (msg !== "") {
       $(this).request(function(response) {
-        console.log(response);
+        $('#chat_input').val('');
       }); 
     } else {
       $('#chat_input').css({
@@ -23,13 +23,14 @@ $(function() {
 
 
 (function($) {
-  $.fn.request = function(opts) {
+  $.fn.request = function(success) {
     var jqopts = {
       url: this.attr('action'),
       type: this.attr('method') || 'GET',
-      data: this.serialize()
+      data: this.serialize(),
+      complete: success
     };
-    return $.ajax(jqopts);
+    $.ajax(jqopts);
   };
 })(jQuery);
 
@@ -39,10 +40,14 @@ var channel = pusher.subscribe('groupon_go');
 
 pusher.bind('new_post',
   function(data) {
-    $('#chat_input').val('');
-    $('#chat_data').prepend($('<li/>', {
-      html: data.name + data.body
-    }));
+    var tmpl = MustacheTemplates['chats/_post'];
+    var post = {
+      profile_image_url: data.profile_image_url,
+      name: data.name,
+      chat_input: data.body,
+      time_ago: 'less than a minute'
+    };
+    $('#chat_data').prepend(Mustache.to_html(tmpl, post));
   }
 );
 
