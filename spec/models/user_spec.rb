@@ -9,4 +9,8 @@ describe User do
   it "should instantiate" do
     @user.should_not be_nil
   end
+  
+  it "should have a name from twitter, I guess?" do
+    @user.name.should_not be_nil
+  end
 end

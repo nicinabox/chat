@@ -27,7 +27,7 @@ pusher.bind('new_post',
   function(data) {
     $('#chat_input').val('');
     $('#chat_data').prepend($('<li/>', {
-      html: data.body
+      html: data.name + ' said: ' + data.body
     }));
   }
 );
